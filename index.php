@@ -10,7 +10,19 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="shortcut icon" href="logo/informatica.png" type="image/x-icon">
+		<link rel="shortcut icon" href="logo/info.png" type="image/x-icon">
+		<script type="text/javascript">
+    (function(p,u,s,h){
+        p._pcq=p._pcq||[];
+        p._pcq.push(['_currentTime',Date.now()]);
+        s=u.createElement('script');
+        s.type='text/javascript';
+        s.async=true;
+        s.src='https://cdn.pushcrew.com/js/26a333eda31dc2fdc370e267224de562.js';
+        h=u.getElementsByTagName('script')[0];
+        h.parentNode.insertBefore(s,h);
+    })(window,document);
+  </script>
 	</head>
 	<body class="is-preload">
 
@@ -23,20 +35,13 @@
 						<nav class="links">
 							<ul>
 								<li><a href="index.php">Inicio</a></li>
-								<li><a href="blog.php">Blog</a></li>
-								<li><a href="act.php">Actividad de la semana</a></li>
 								<li><a href="reg.php">Registrar</a></li>
 								<li><a href="con.php">Contacto</a></li>
+								<li><a href="con.php">INICIAR SESIÓN</a></li>
 							</ul>
 						</nav>
 						<nav class="main">
 							<ul>
-								<li class="search">
-									<a class="fa-search" href="#search">Buscar</a>
-									<form id="search" method="get" action="#">
-										<input type="text" name="query" placeholder="Search" />
-									</form>
-								</li>
 								<li class="menu">
 									<a class="fa-bars" href="#menu">Menú</a>
 								</li>
@@ -47,38 +52,19 @@
 				<!-- Menu -->
 					<section id="menu">
 
-						<!-- Search -->
-							<section>
-								<form class="search" method="get" action="#">
-									<input type="text" name="query" placeholder="Buscar" />
-								</form>
-							</section>
-
 						<!-- Links -->
 							<section>
 								<ul class="links">
 									<li>
 										<a href="#">
 											<h3>Inicio</h3>
-											<p>Academia de Informática 2018</p>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<h3>Blog</h3>
-											<p>Contenido sobre la Academia de Informática</p>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<h3>Actividad de la semana</h3>
-											<p>Actividades de la semana de Informática</p>
+											<p>Academia de Informática 2018.</p>
 										</a>
 									</li>
 									<li>
 										<a href="#">
 											<h3>Contacto</h3>
-											<p>Contacto con la intalación del ILB Centro</p>
+											<p>Contacto con la intalación del ILB Centro.</p>
 										</a>
 									</li>
 								</ul>
@@ -89,8 +75,10 @@
 								<ul class="actions stacked">
 									<li><a href="reg.php" class="button large fit">Registrar</a></li>
 								</ul>
+								<ul class="actions stacked">
+									<li><a href="ini.php" class="button large fit">INICIAR SESIÓN</a></li>
+								</ul>
 							</section>
-
 					</section>
 
 				<!-- Main -->
@@ -500,7 +488,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 
 						<!-- Intro -->
 							<section id="intro">
-								<a href="index.php" class="logo"><div align="center"><img src="logo/informatica.png" alt="" /></div></a>
+								<a href="index.php" class="logo"><div align="center"><img src="logo/info.png" alt="" /></div></a>
 								<header>
 									<div align="center">
 										<h2>Eventos Informática 2018</h2>
