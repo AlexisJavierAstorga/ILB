@@ -37,7 +37,7 @@
 								<li><a href="index.php">Inicio</a></li>
 								<li><a href="reg.php">Registrar</a></li>
 								<li><a href="con.php">Contacto</a></li>
-								<li><a href="con.php">INICIAR SESIÓN</a></li>
+								<li><a href="login.php">INICIAR SESIÓN</a></li>
 							</ul>
 						</nav>
 						<nav class="main">
