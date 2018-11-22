@@ -19,8 +19,10 @@ if($resultado = mysqli_fetch_array($proceso)){
   $_SESSION['u_usuario'] = $resultado['correo'];
   $_SESSION['password'] = $resultado['pass'];
 
-  header("Location: index_.php");
-    //echo "<script>alert('Bienvenido $usuario')</script>";
+  //header("Location: alumno.php");
+    echo "<script>alert('Bienvenido al portal, $usuario');
+    location.href='alumno.php';
+    </script>";
 }else{
   echo '<script>
   alert("Correo o contraseña incorrecto");

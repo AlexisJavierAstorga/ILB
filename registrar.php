@@ -33,5 +33,4 @@ mysqli_close($con);
 		location.href="login.php";
 		</script>';
 	}
-	//Cerrar conexion
 ?>

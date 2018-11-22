@@ -25,9 +25,62 @@
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="assets/css/utillog.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/mainlog.css">
+
+	<link rel="stylesheet" type="text/css" href="assets/css/mainlog2.css">
+
 <!--===============================================================================================-->
 </head>
 <body>
+<header id="header">
+	<h1><a href="index.php">Instituto Leonardo Bravo</a></h1>
+	<nav class="links">
+		<ul>
+			<li><a href="index.php">Inicio</a></li>
+			<li><a href="reg.php">Registrar</a></li>
+			<li><a href="con.php">Contacto</a></li>
+			<li><a href="login.php">INICIAR SESIÓN</a></li>
+		</ul>
+	</nav>
+	<nav class="main">
+		<ul>
+			<li class="menu">
+				<a class="fa-bars" href="#menu">Menú</a>
+			</li>
+		</ul>
+	</nav>
+	</header>
+
+	<!-- Menu -->
+	<section id="menu">
+
+	<!-- Links -->
+		<section>
+			<ul class="links">
+				<li>
+					<a href="index.php">
+						<h3>Inicio</h3>
+						<p>Academia de Informática 2018.</p>
+					</a>
+				</li>
+				<li>
+					<a href="con.php">
+						<h3>Contacto</h3>
+						<p>Contacto con la intalación del ILB Centro.</p>
+					</a>
+				</li>
+			</ul>
+		</section>
+
+	<!-- Actions -->
+		<section>
+			<ul class="actions stacked">
+				<li><a href="reg.php" class="button1 large fit">Registrar</a></li>
+			</ul>
+			<ul class="actions stacked">
+				<li><a href="login.php" class="button1 large fit">INICIAR SESIÓN</a></li>
+			</ul>
+		</section>
+	</section>
 
 	<div class="limiter">
 		<div class="container-login100">
@@ -40,12 +93,12 @@
 						<img src="logo/info.png" alt="Informática">
 					</span>
 
-					<div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate = "Enter username">
+					<div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate = "Inserta el correo correcto">
 						<input class="input100" type="text" name="email">
 						<span class="focus-input100" data-placeholder="Correo"></span>
 					</div>
 
-					<div class="wrap-input100 validate-input m-b-50" data-validate="Enter password">
+					<div class="wrap-input100 validate-input m-b-50" data-validate="Inserta el password correcto">
 						<input class="input100" type="password" name="password">
 						<span class="focus-input100" data-placeholder="Contraseña"></span>
 					</div>
@@ -101,6 +154,12 @@
 	<script src="assets/vendorlog/countdowntime/countdowntime.js"></script>
 <!--===============================================================================================-->
 	<script src="assets/js/mainlog.js"></script>
+
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
 
 </body>
 </html>

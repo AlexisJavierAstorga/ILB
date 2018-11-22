@@ -11,18 +11,22 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="shortcut icon" href="logo/info.png" type="image/x-icon">
+		<!--
+			Script notificaciones
+		-->
 		<script type="text/javascript">
-    (function(p,u,s,h){
-        p._pcq=p._pcq||[];
-        p._pcq.push(['_currentTime',Date.now()]);
-        s=u.createElement('script');
-        s.type='text/javascript';
-        s.async=true;
-        s.src='https://cdn.pushcrew.com/js/26a333eda31dc2fdc370e267224de562.js';
-        h=u.getElementsByTagName('script')[0];
-        h.parentNode.insertBefore(s,h);
-    })(window,document);
-  </script>
+		    (function(p,u,s,h){
+		        p._pcq=p._pcq||[];
+		        p._pcq.push(['_currentTime',Date.now()]);
+		        s=u.createElement('script');
+		        s.type='text/javascript';
+		        s.async=true;
+		        s.src='https://cdn.pushcrew.com/js/370952965883731e0abaf1f4f1cf6b80.js';
+		        h=u.getElementsByTagName('script')[0];
+		        h.parentNode.insertBefore(s,h);
+		    })(window,document);
+		  </script>
+
 	</head>
 	<body class="is-preload">
 
@@ -56,13 +60,13 @@
 							<section>
 								<ul class="links">
 									<li>
-										<a href="#">
+										<a href="index.php">
 											<h3>Inicio</h3>
 											<p>Academia de Informática 2018.</p>
 										</a>
 									</li>
 									<li>
-										<a href="#">
+										<a href="con.php">
 											<h3>Contacto</h3>
 											<p>Contacto con la intalación del ILB Centro.</p>
 										</a>
@@ -76,7 +80,7 @@
 									<li><a href="reg.php" class="button large fit">Registrar</a></li>
 								</ul>
 								<ul class="actions stacked">
-									<li><a href="ini.php" class="button large fit">INICIAR SESIÓN</a></li>
+									<li><a href="login.php" class="button large fit">INICIAR SESIÓN</a></li>
 								</ul>
 							</section>
 					</section>

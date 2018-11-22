@@ -43,7 +43,7 @@
 
 
 			<div class="wrap-login100 p-l-50 p-r-50 p-t-72 p-b-50">
-				<form action="registrar.php" method="post" class="login100-form validate-form">
+				<form action="registrar.php" method="post" TARGET="_parent" class="login100-form validate-form">
 					<a href="index.php" class="dis-block txt3 hov1 p-r-30 p-t-10 p-b-10 p-l-30">
 						<i class="fa fa-long-arrow-left m-l-5"></i>
 						Regresar
@@ -53,25 +53,25 @@
 					</span>
 
 					<div class="wrap-input100 validate-input" data-validate="Rol requerido">
-					<span class="label-input100">Inserta la foto para tu gafete: </span>
-					<input id="file" type="file" name="foto"/><br><br>
+					<span class="label-input100">Inserta la foto para tu gafete: </span><br><br>
+					<input id="file" type="file" name="foto" required/><br><br>
 						<div id="preview">DIMENSIONES 2.5X3 cm</div>
 						<span class="focus-input100"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate="Rol requerido">
-						<span class="label-input100">¿Cuál es tu rol en el proyecto?</span>
-						<select name="rol">
-					          <option value="0">Selecciona tu ROL</option>
+						<span class="label-input100">¿Cuál es tu rol en el proyecto?</span><br><br>
+						<select name="rol" required>
+					          <option value="">Selecciona tu ROL</option>
 					          <option value="lider">Líder</option>
-										<option value="trabajador">Colaborador</option>
+										<option value="cola">Colaborador</option>
 					          <!--option value="2">Estado de mexico</option -->
 					   </select>
 						 <span class="focus-input100"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate="Nombre requerido">
-						<span class="label-input100">Nombre (s):</span>
+						<span class="label-input100" >Nombre (s):</span>
 						<input class="input100" type="text" name="username" placeholder="Nombre(s)...">
 						<span class="focus-input100"></span>
 					</div>
@@ -90,13 +90,14 @@
 
 					<div class="wrap-input100 validate-input" data-validate = "Para correo válido es con @outlook u otro">
 						<span class="label-input100">Correo:</span>
-						<input class="input100" type="text" name="email" placeholder="ejemplo@outlook.com">
+						<input class="input100" type="text" name="email" placeholder="ejemplo@outlook.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
 						<span class="focus-input100"></span>
 					</div>
 
-					<div class="wrap-input100 validate-input" data-validate = "Contraseña requerida">
-						<span class="label-input100">Contraseña:</span>
-						<input class="input100" type="password" name="password" id="password" placeholder="*************">
+					<div class="wrap-input100 validate-input" data-validate = "Debe contener al menos un número, una letra mayúscula y minúscula, con 8 caracteres como máximo.">
+						<span class="label-input100">Contraseña:</span><br>
+						<span class="label-input100" style="font-size:9pt;">(Debe contener al menos un número, una letra mayúscula y minúscula, con 8 caracteres como máximo)</span>
+						<input class="input100" type="password" name="password" id="password" placeholder="*************" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Debe contener al menos un número, una letra mayúscula y minúscula, con 8 caracteres como máximo.">
 						<span class="focus-input100"></span>
 					</div>
 
