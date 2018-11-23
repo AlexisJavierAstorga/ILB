@@ -92,19 +92,19 @@
 							<article class="post">
 								<header>
 									<div class="title">
-										<h2><a href="single.php">Titulo</a></h2>
-										<p>Descripcion</p>
+										<h2><a href="auditorio.php">¡La semana de Informática se Acerca!</a></h2>
+										<p>Prepara tu proyecto que a partir del 28 al 30 de Noviembre se presentan en el Auditorio.</p>
 									</div>
 									<div class="meta">
-										<time class="published" datetime="2015-10-25">Mes Dia, Año</time>
-										<a href="#" class="author"><span class="name">Autor</span><img src="images/avatar.jpg" alt="" /></a>
+										<time class="published" datetime="2018-11-22">Noviembre 22, 2018</time>
+										<a href="#" class="author"><span class="name">Astorga</span><img src="images/autor/avatar1.jpg" alt="" /></a>
 									</div>
 								</header>
-								<a href="single.php" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
-								<p>Parrafo.</p>
+								<a href="auditorio.php" class="image featured"><img src="images/auditorio.jpg" height="500" alt="" /></a>
+								<p>Recuerda que, para presentar tu proyecto en el Auditorio, es necesario registrarte en esta Página Web para generar tu pase de... </p>
 								<footer>
 									<ul class="actions">
-										<li><a href="single.php" class="button large">Seguir leyendo</a></li>
+										<li><a href="auditorio.php" class="button large">Seguir leyendo</a></li>
 									</ul>
 									<ul class="stats">
 										<li><a href="#">General</a></li>
@@ -114,58 +114,7 @@
 								</footer>
 							</article>
 
-						<!-- Post -->
-						<article class="post">
-							<header>
-								<div class="title">
-									<h2><a href="single.php">Titulo</a></h2>
-									<p>Descripcion</p>
-								</div>
-								<div class="meta">
-									<time class="published" datetime="2015-10-25">Mes Dia, Año</time>
-									<a href="#" class="author"><span class="name">Autor</span><img src="images/avatar.jpg" alt="" /></a>
-								</div>
-							</header>
-							<a href="single.php" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
-							<p>Parrafo.</p>
-							<footer>
-								<ul class="actions">
-									<li><a href="single.php" class="button large">Seguir leyendo</a></li>
-								</ul>
-								<ul class="stats">
-									<li><a href="#">General</a></li>
-									<li><a href="#" class="icon fa-heart">-</a></li>
-									<li><a href="#" class="icon fa-comment">-</a></li>
-								</ul>
-							</footer>
-						</article>
-
-						<!-- Post -->
-						<article class="post">
-							<header>
-								<div class="title">
-									<h2><a href="single.php">Titulo</a></h2>
-									<p>Descripcion</p>
-								</div>
-								<div class="meta">
-									<time class="published" datetime="2015-10-25">Mes Dia, Año</time>
-									<a href="#" class="author"><span class="name">Autor</span><img src="images/avatar.jpg" alt="" /></a>
-								</div>
-							</header>
-							<a href="single.php" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
-							<p>Parrafo.</p>
-							<footer>
-								<ul class="actions">
-									<li><a href="single.php" class="button large">Seguir leyendo</a></li>
-								</ul>
-								<ul class="stats">
-									<li><a href="#">General</a></li>
-									<li><a href="#" class="icon fa-heart">-</a></li>
-									<li><a href="#" class="icon fa-comment">-</a></li>
-								</ul>
-							</footer>
-						</article>
-
+						
 						<!-- Post -->
 						<!--
 							<article class="post">
@@ -497,7 +446,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 									<div align="center">
 										<h2>Eventos Informática 2018</h2>
 										<p>En esta Página Web podrás encontrar todo lo relacionado a los eventos que suceden en la Academia de Informática. </p>
-										<p>Si eres alumno <a href="registro.php">Regístrate</a> y sube tu proyecto. </p>
+										<p>Si eres alumno <a href="reg.php">Regístrate</a> y sube tu proyecto. </p>
 									</div>
 								</header>
 							</section>
@@ -509,14 +458,14 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 									<!-- Mini Post -->
 										<article class="mini-post">
 											<header>
-												<h3><a href="single.php">Titulo</a></h3>
-												<time class="published" datetime="2015-10-20">Mes Dia, Año</time>
-												<a href="#" class="author"><img src="images/avatar.jpg" alt="" /></a>
+												<h3><a href="single.php">¿Tienes dudas de como registrar tu proyecto?</a></h3>
+												<time class="published" datetime="2018-11-22">Noviembre 22, 2018</time>
+												<a href="#" class="author"><img src="images/autor/avatar1.jpg" alt="" /></a>
 											</header>
 											<a href="single.php" class="image"><img src="images/pic04.jpg" alt="" /></a>
 										</article>
 
-									<!-- Mini Post -->
+									<!-- Mini Post 
 										<article class="mini-post">
 											<header>
 												<h3><a href="single.php">Titulo</a></h3>
@@ -526,75 +475,22 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 											<a href="single.php" class="image"><img src="images/pic05.jpg" alt="" /></a>
 										</article>
 
-									<!-- Mini Post -->
-										<article class="mini-post">
-											<header>
-												<h3><a href="single.php">Titulo</a></h3>
-												<time class="published" datetime="2015-10-20">Mes Dia, Año</time>
-												<a href="#" class="author"><img src="images/avatar.jpg" alt="" /></a>
-											</header>
-											<a href="single.php" class="image"><img src="images/pic06.jpg" alt="" /></a>
-										</article>
-
-									<!-- Mini Post -->
-										<article class="mini-post">
-											<header>
-												<h3><a href="single.php">Titulo</a></h3>
-												<time class="published" datetime="2015-10-20">Mes Dia, Año</time>
-												<a href="#" class="author"><img src="images/avatar.jpg" alt="" /></a>
-											</header>
-											<a href="single.php" class="image"><img src="images/pic07.jpg" alt="" /></a>
-										</article>
+									-->
 
 								</div>
 							</section>
 
 						<!-- Posts List -->
 							<section>
+								<h2>Proyectos</h2>
 								<ul class="posts">
 									<li>
 										<article>
 											<header>
-												<h3><a href="single.php">Titulo</a></h3>
-												<time class="published" datetime="2015-10-20">Mes Dia, Año</time>
+												<h3><a href="http://rstextilnew.000webhostapp.com">R.S. Textil</a></h3>
+												<time class="published" datetime="2018-11-22">Noviembre 22, 2018</time>
 											</header>
-											<a href="single.php" class="image"><img src="images/pic08.jpg" alt="" /></a>
-										</article>
-									</li>
-									<li>
-										<article>
-											<header>
-												<h3><a href="single.php">Titulo</a></h3>
-												<time class="published" datetime="2015-10-20">Mes Dia, Año</time>
-											</header>
-											<a href="single.php" class="image"><img src="images/pic09.jpg" alt="" /></a>
-										</article>
-									</li>
-									<li>
-										<article>
-											<header>
-												<h3><a href="single.php">Titulo</a></h3>
-												<time class="published" datetime="2015-10-20">Mes Dia, Año</time>
-											</header>
-											<a href="single.php" class="image"><img src="images/pic10.jpg" alt="" /></a>
-										</article>
-									</li>
-									<li>
-										<article>
-											<header>
-												<h3><a href="single.php">Titulo</a></h3>
-												<time class="published" datetime="2015-10-20">Mes Dia, Año</time>
-											</header>
-											<a href="single.php" class="image"><img src="images/pic11.jpg" alt="" /></a>
-										</article>
-									</li>
-									<li>
-										<article>
-											<header>
-												<h3><a href="single.php">Titulo</a></h3>
-												<time class="published" datetime="2015-10-20">Mes Dia, Año</time>
-											</header>
-											<a href="single.php" class="image"><img src="images/pic12.jpg" alt="" /></a>
+											<a href="single.php" class="image"><img src="images/nov/rs.png" alt="" /></a>
 										</article>
 									</li>
 								</ul>
@@ -606,7 +502,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 								<p><b>Objetivo de la licenciatura en Ciencias de la Informática</b></p>
 								<p align="justify">Preparar profesionistas informáticos con un perfil ejecutivo y emprendedor que emplee la información como recurso corporativo, para brindar soluciones competitivas mediante...</p>
 								<ul class="actions">
-									<li><a href="#" class="button">Leer más</a></li>
+									<li><a href="acer.php" class="button">Leer más</a></li>
 								</ul>
 							</section>
 
