@@ -114,7 +114,7 @@
 								</footer>
 							</article>
 
-						
+
 						<!-- Post -->
 						<!--
 							<article class="post">
@@ -465,7 +465,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 											<a href="single.php" class="image"><img src="images/pic04.jpg" alt="" /></a>
 										</article>
 
-									<!-- Mini Post 
+									<!-- Mini Post
 										<article class="mini-post">
 											<header>
 												<h3><a href="single.php">Titulo</a></h3>

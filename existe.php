@@ -20,9 +20,14 @@ if($resultado = mysqli_fetch_array($proceso)){
   $_SESSION['password'] = $resultado['pass'];
 
   //header("Location: alumno.php");
-    echo "<script>alert('Bienvenido al portal, $usuario');
+    /*echo "<script>alert('Bienvenido al portal, $usuario');
     location.href='alumno.php';
-    </script>";
+    </script>";*/
+if($_SESSION['r_rol'] == 'lider')
+header('Location: alumno.php'); // No se puede enviar más de un header a la vez, por eso eliminé el otro header.
+else
+header('Location: colaborador.php');
+
 }else{
   echo '<script>
   alert("Correo o contraseña incorrecto");

@@ -120,53 +120,58 @@ if(isset($_SESSION['u_usuario'])){
 									<form action="regproy.php" name="formulario" method="post">
 										<div class="row gtr-uniform">
 
+                      <div class="col-12">
+												<select name="demo-category" id="demo-category">
+													<option value="">- Selecciona un proyecto -</option>
+                          <?
+                          session_start();
+                          include("conexion.php");
+                 $consulta="select * from proyecto";
+                 $resultado=mysqli_query($con,$consulta);
+
+                        while($lista=mysqli_fetch_array($resultado)){
+
+	    ?>
+                   <option>  <? echo $lista['proyecto']?></option> 
+    <? } ?>
+												</select>
+											</div>
+
+                      <div class="col-12 col-12-xsmall">
+                        <h4>*Líder</h4>
+												<input type="text" name="lider" id="demo-grupo" value="" placeholder="Líder del proyecto..." required disabled/>
+											</div>
+
 											<div class="col-6 col-12-xsmall">
                         <h4>*Grupo</h4>
 
-												<input type="text" name="grupo" id="demo-grupo" value="" placeholder="Escribe el grupo al que perteneces..." required/>
+												<input type="text" name="grupo" id="demo-grupo" value="" required disabled/>
 											</div>
 
 											<div class="col-6 col-12-xsmall">
                         <h4>*Salón</h4>
-												<input type="text" name="salon" id="demo-salon" value="" placeholder="Escribe el salón al que perteneces..." required/>
+												<input type="text" name="salon" id="demo-salon" value="" required disabled/>
 											</div>
 
                       <div class="col-6 col-12-xsmall">
                         <br><h4>*Nombre de la consultoría</h4>
-												<input type="text" name="consul" id="demo-grupo" value="" placeholder="Escribe el nombre de la consultoría..." required/>
-											</div>
-
-											<div class="col-10 col-12-xsmall">
-                        <br><h4>*Imagen Corporativa</h4>
-                        <input id="file" type="file" name="corp" required/>
-                        <div id="preview">DIMENSIONES 900X600 cm</div>
+												<input type="text" name="consul" id="demo-grupo" value="" required disabled/>
 											</div>
 
                       <div class="col-6 col-12-xsmall">
                         <br><h4>*Nombre del proyecto</h4>
-												<input type="text" name="proy" id="demo-proy" value="" placeholder="Escribe el nombre del proyecto..." required/>
+												<input type="text" name="proy" id="demo-proy" value="" required disabled/>
 											</div>
 
 											<div class="col-12">
                         <br><h4>*Breve descripción del proyecto</h4>
-												<textarea name="desc" id="demo-desc" placeholder="Descripción..." rows="4" required></textarea>
-											</div>
-
-                      <div class="col-10 col-12-xsmall">
-                        <br><h4>*Organigrama</h4>
-                        <input id="file2" type="file" name="orga" required/>
-                        <div id="preview2">DIMENSIONES 900X600 cm</div>
-											</div>
-
-                      <div class="col-10 col-12-xsmall">
-                        <br><h4>*Presentación en Power Point</h4>
-                        <input id="file" type="file" name="power" required/>
+												<textarea name="desc" id="demo-desc" rows="4" disabled></textarea>
 											</div>
 
 											<div class="col-12">
                         <br>
 												<ul class="actions">
-													<li><input type="submit" value="Registrar proyecto" /></li>
+													<li><input type="submit" value="Registrarte en el proyecto" /></li>
 												</ul>
 											</div>
 										</div>

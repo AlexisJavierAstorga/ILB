@@ -34,3 +34,10 @@ mysqli_close($con);
 		</script>';
 	}
 ?>
+
+<?php
+if($_POST['rol'] == 'lider')
+header('Location: alumno.php'); // No se puede enviar más de un header a la vez, por eso eliminé el otro header.
+else
+header('Location: colaborador.php');
+?>
