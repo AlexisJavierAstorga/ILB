@@ -21,18 +21,6 @@ if(isset($_SESSION['u_usuario'])){
 		<!--
 			Script notificaciones
 		-->
-		<script type="text/javascript">
-		    (function(p,u,s,h){
-		        p._pcq=p._pcq||[];
-		        p._pcq.push(['_currentTime',Date.now()]);
-		        s=u.createElement('script');
-		        s.type='text/javascript';
-		        s.async=true;
-		        s.src='https://cdn.pushcrew.com/js/370952965883731e0abaf1f4f1cf6b80.js';
-		        h=u.getElementsByTagName('script')[0];
-		        h.parentNode.insertBefore(s,h);
-		    })(window,document);
-		  </script>
 
 	</head>
 	<body class="is-preload">
@@ -212,14 +200,20 @@ if(isset($_SESSION['u_usuario'])){
 
 						<!-- Footer -->
 							<section id="footer">
-								<ul class="icons">
-									<li><a href="#" class="fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="fa-facebook"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="fa-rss"><span class="label">RSS</span></a></li>
-									<li><a href="#" class="fa-envelope"><span class="label">Email</span></a></li>
-								</ul>
-								<p class="copyright">Copyright &copy; ILB <a href="http://ilb.mx/">(Instituto Leonardo Bravo).</a> <a href="index.php">Academia de Infotmática. </a></p>
+                <h2>Redes Sociales</h2>
+                <ul class="icons">
+
+    							<!--
+    							<li><a href="#" class="fa-twitter"><span class="label">Twitter</span></a></li>
+    							<li><a href="#" class="fa-instagram"><span class="label">Instagram</span></a></li>
+    							<li><a href="#" class="fa-rss"><span class="label">RSS</span></a></li>
+    							<li><a href="#" class="fa-envelope"><span class="label">Email</span></a></li>
+
+    							-->
+
+    							<li><a href="https://www.facebook.com/ILBoficial/" class="fa-facebook"><span class="label">Facebook</span></a></li>
+    						</ul>
+    						<p class="copyright">&copy; CODNAK. Diseñado por: <a href="#">Astorga</a>.</p>
 							</section>
 
 					</section>

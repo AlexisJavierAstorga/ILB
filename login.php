@@ -94,12 +94,12 @@
 					</span>
 
 					<div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate = "Inserta el correo correcto">
-						<input class="input100" type="text" name="email">
+						<input class="input100" type="text" name="email" required>
 						<span class="focus-input100" data-placeholder="Correo"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input m-b-50" data-validate="Inserta el password correcto">
-						<input class="input100" type="password" name="password">
+						<input class="input100" type="password" name="password" required>
 						<span class="focus-input100" data-placeholder="Contraseña"></span>
 					</div>
 
@@ -134,7 +134,6 @@
 			</div>
 		</div>
 	</div>
-
 
 	<div id="dropDownSelect1"></div>
 

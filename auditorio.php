@@ -102,14 +102,20 @@
 
 				<!-- Footer -->
 					<section id="footer">
+						<h2>Redes Sociales</h2>
 						<ul class="icons">
+
+							<!--
 							<li><a href="#" class="fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="fa-facebook"><span class="label">Facebook</span></a></li>
 							<li><a href="#" class="fa-instagram"><span class="label">Instagram</span></a></li>
 							<li><a href="#" class="fa-rss"><span class="label">RSS</span></a></li>
 							<li><a href="#" class="fa-envelope"><span class="label">Email</span></a></li>
+
+							-->
+
+							<li><a href="https://www.facebook.com/ILBoficial/" class="fa-facebook"><span class="label">Facebook</span></a></li>
 						</ul>
-						<p class="copyright">&copy; CODNAK. Diseñado por: <a href="astorga.php">Astorga</a>.</p>
+						<p class="copyright">&copy; CODNAK. Diseñado por: <a href="#">Astorga</a>.</p>
 					</section>
 
 			</div>
