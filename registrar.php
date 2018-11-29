@@ -5,7 +5,6 @@ $rol = $_POST["rol"];
 $nombre = $_POST["username"];
 $apellidoPaterno = $_POST["apellidoPat"];
 $apellidoMaterno = $_POST["apellidoMat"];
-$foto = $_POST["foto"];
 $correo = $_POST["email"];
 $password = $_POST["password"];
 
@@ -60,7 +59,7 @@ if(isset($_POST['generar'])){
 
 
 
-	$insertar = " INSERT INTO alumnos (foto, rol, nombre, app, apm, correo, pass, qr) VALUES ('$foto','$rol','$nombre','$apellidoPaterno','$apellidoMaterno','$correo','$password','$filename')";
+	$insertar = " INSERT INTO alumnos (foto, rol, nombre, app, apm, correo, pass, qr) VALUES ('$name','$rol','$nombre','$apellidoPaterno','$apellidoMaterno','$correo','$password','$filename')";
 
 	$verificar_usuario = mysqli_query($con, "SELECT * FROM alumnos WHERE correo = '$correo'");
 	if (mysqli_num_rows($verificar_usuario) > 0){

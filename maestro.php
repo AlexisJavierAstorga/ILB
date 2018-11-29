@@ -1,4 +1,10 @@
-
+<?php
+session_start();
+if(isset($_SESSION['u_usuario'])){
+}else{
+  header("Location: index.php");
+}
+?>
 <!DOCTYPE HTML>
 <!--
 	Future Imperfect by HTML5 UP
@@ -27,8 +33,8 @@
 						<h1><a href="index.php">Instituto Leonardo Bravo</a></h1>
 						<nav class="links">
 							<ul>
-                <li><a href="alumno.php">Inicio</a></li>
-								<li><a href="audi.php">Acceso Auditorio</a></li>
+                <li><a href="maestro.php">Inicio</a></li>
+								<li><a href="audimaes.php">Acceso Auditorio</a></li>
 								<li><a href="conlog.php">Contacto</a></li>
 								<?php
 										echo "<li><a href='salir.php'>Salir de la cuenta</a></li>";
@@ -51,25 +57,19 @@
             <section>
               <ul class="links">
                 <li>
-                  <a href="alumno.php">
+                  <a href="maestro.php">
                     <h3>Inicio</h3>
                     <p>Academia de Informática 2018.</p>
                   </a>
                 </li>
                 <li>
-                  <a href="alumnomod.php">
-                    <h3>Modificar</h3>
-                    <p>Modifica datos de tu registro.</p>
-                  </a>
-                </li>
-                <li>
-                  <a href="audi.php">
+                  <a href="audimaes.php">
                     <h3>Acceso Auditorio</h3>
                     <p>En este apartado encontrarás tu gafete para el acceso al Auditorio.</p>
                   </a>
                 </li>
                 <li>
-                  <a href="con.php">
+                  <a href="conlog.php">
                     <h3>Contacto</h3>
                     <p>Contacto con la intalación del ILB Centro.</p>
                   </a>
