@@ -5,6 +5,7 @@ $rol = $_POST["rol"];
 $nombre = $_POST["username"];
 $apellidoPaterno = $_POST["apellidoPat"];
 $apellidoMaterno = $_POST["apellidoMat"];
+$foto = $_POST["foto"];
 $correo = $_POST["email"];
 $password = $_POST["password"];
 
@@ -34,7 +35,32 @@ echo "<br> Nombre Temporal: ".$_FILES['foto']["tmp_name"];  //nombre del archivo
 echo "<br> Tamanio: ".$_FILES['foto']["size"]." bytes";      //tamaño
 */
 
-	$insertar = " INSERT INTO alumnos (foto, rol, nombre, app, apm, correo, pass) VALUES ('$name','$rol','$nombre','$apellidoPaterno','$apellidoMaterno','$correo','$password')";
+/*---------------------------- Códifo Qr ----------------------*/
+require('phpqrcode/qrlib.php');
+
+if(isset($_POST['generar'])){
+
+  if(!empty($_POST['email'])){
+
+    $dir = 'images/archivos/qr/';
+
+    if(!file_exists($dir))
+    mkdir($dir);{
+      $email = $_POST['email'];
+      //$tam = htmlentities($_POST['tam']);
+      //$niv = htmlentities($_POST['niv']);
+      $filename = $dir.''.$email.'.png';
+      $marco = 3;
+
+        QRcode::png($email, $filename, QR_ECLEVEL_L, 5, $marco);
+        echo '<img src="'.$filename.'" aling="left" />';
+    }
+  }
+}
+
+
+
+	$insertar = " INSERT INTO alumnos (foto, rol, nombre, app, apm, correo, pass, qr) VALUES ('$foto','$rol','$nombre','$apellidoPaterno','$apellidoMaterno','$correo','$password','$filename')";
 
 	$verificar_usuario = mysqli_query($con, "SELECT * FROM alumnos WHERE correo = '$correo'");
 	if (mysqli_num_rows($verificar_usuario) > 0){

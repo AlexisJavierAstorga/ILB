@@ -29,56 +29,68 @@ if(isset($_SESSION['u_usuario'])){
 			<div id="wrapper">
 
 				<!-- Header -->
-				<header id="header">
-					<h1><a href="index.php">Instituto Leonardo Bravo</a></h1>
-					<nav class="links">
-						<ul>
-							<li><a href="index.php">Inicio</a></li>
-							<li><a href="reg.php">Registrar</a></li>
-							<li><a href="con.php">Contacto</a></li>
-							<li><a href="login.php">INICIAR SESIÓN</a></li>
-						</ul>
-					</nav>
-					<nav class="main">
-						<ul>
-							<li class="menu">
-								<a class="fa-bars" href="#menu">Menú</a>
-							</li>
-						</ul>
-					</nav>
-				</header>
+        <header id="header">
+          <h1><a href="index.php">Instituto Leonardo Bravo</a></h1>
+          <nav class="links">
+            <ul>
+              <li><a href="alumno.php">Inicio</a></li>
+              <li><a href="alumnomod.php">Modificar</a></li>
+              <li><a href="audi.php">Acceso Auditorio</a></li>
+              <li><a href="conlog.php">Contacto</a></li>
+              <?php
+                  echo "<li><a href='salir.php'>Salir de la cuenta</a></li>";
+              ?>
+            </ul>
+          </nav>
+          <nav class="main">
+            <ul>
+              <li class="menu">
+                <a class="fa-bars" href="#menu">Menú</a>
+              </li>
+            </ul>
+          </nav>
+        </header>
 
 			<!-- Menu -->
-				<section id="menu">
+      <section id="menu">
 
-					<!-- Links -->
-						<section>
-							<ul class="links">
-								<li>
-									<a href="index.php">
-										<h3>Inicio</h3>
-										<p>Academia de Informática 2018.</p>
-									</a>
-								</li>
-								<li>
-									<a href="con.php">
-										<h3>Contacto</h3>
-										<p>Contacto con la intalación del ILB Centro.</p>
-									</a>
-								</li>
-							</ul>
-						</section>
+        <!-- Links -->
+        <section>
+          <ul class="links">
+            <li>
+              <a href="alumno.php">
+                <h3>Inicio</h3>
+                <p>Academia de Informática 2018.</p>
+              </a>
+            </li>
+            <li>
+              <a href="alumnomod.php">
+                <h3>Modificar</h3>
+                <p>Modifica datos de tu registro.</p>
+              </a>
+            </li>
+            <li>
+              <a href="audi.php">
+                <h3>Acceso Auditorio</h3>
+                <p>En este apartado encontrarás tu gafete para el acceso al Auditorio.</p>
+              </a>
+            </li>
+            <li>
+              <a href="con.php">
+                <h3>Contacto</h3>
+                <p>Contacto con la intalación del ILB Centro.</p>
+              </a>
+            </li>
+          </ul>
+        </section>
 
-						<!-- Actions -->
-							<section>
-								<ul class="actions stacked">
-									<li><a href="reg.php" class="button large fit">Registrar</a></li>
-								</ul>
-								<ul class="actions stacked">
-									<li><a href="login.php" class="button large fit">INICIAR SESIÓN</a></li>
-								</ul>
-							</section>
-					</section>
+        <!-- Actions -->
+          <section>
+            <ul class="actions stacked">
+              <li><a href="salir.php" class="button large fit">Salir de la cuenta</a></li>
+            </ul>
+          </section>
+      </section>
 
 				<!-- Main -->
 					<div id="main">
@@ -149,94 +161,63 @@ if(isset($_SESSION['u_usuario'])){
 					</div>
 
 					<!-- Sidebar -->
-						<section id="sidebar">
+          <section id="sidebar">
 
-							<!-- Intro -->
-								<section id="intro">
-									<a href="index.php" class="logo"><div align="center"><img src="logo/info.png" alt="" /></div></a>
-									<header>
-										<div align="center">
-											<h2>Eventos Informática 2018</h2>
-											<p>En esta Página Web podrás encontrar todo lo relacionado a los eventos que suceden en la Academia de Informática. </p>
-											<p>Si eres alumno <a href="reg.php">Regístrate</a> y sube tu proyecto. </p>
-										</div>
-									</header>
-								</section>
+            <!-- Intro -->
+              <section id="intro">
+                <a href="alumno.php" class="logo"><div align="center"><?php
+                  echo "<img src='images/archivos/alumnos/".$_SESSION['foto']."' width='30' height='30'>".'<br>'; ?>
 
-							<!-- Mini Posts -->
-								<section>
-									<div class="mini-posts">
+                  <?php
+                    echo "<img src='images/archivos/qr/".$_SESSION['Qr']."'>".'<br>'; ?>
 
-										<!-- Mini Post -->
-											<article class="mini-post">
-												<header>
-													<h3><a href="single.php">¿Tienes dudas de como registrar tu proyecto?</a></h3>
-													<time class="published" datetime="2018-11-22">Noviembre 22, 2018</time>
-													<a href="#" class="author"><img src="images/autor/avatar1.jpg" alt="" /></a>
-												</header>
-												<a href="duda.php" class="image"><img src="images/7mo.jpeg" alt="" height="250"/></a>
-											</article>
+                </div></a>
+                <header>
+                  <div align="center">
 
-										<!-- Mini Post
-											<article class="mini-post">
-												<header>
-													<h3><a href="single.php">Titulo</a></h3>
-													<time class="published" datetime="2015-10-20">Mes Dia, Año</time>
-													<a href="#" class="author"><img src="images/avatar.jpg" alt="" /></a>
-												</header>
-												<a href="single.php" class="image"><img src="images/pic05.jpg" alt="" /></a>
-											</article>
+                    <h2>Bienvenido</h2>
 
-										-->
+                    <h1>
+                      <?php
+                        echo $_SESSION['nombre'], '&nbsp', $_SESSION['apellidoPat'], '&nbsp', $_SESSION['apellidoMat'];
+                    ?>
+                  </h1>
 
-									</div>
-								</section>
+                  <?php
+                    echo $_SESSION['u_usuario'];
+                ?>
+                  </div>
+                </header>
+              </section>
 
-							<!-- Posts List -->
-								<section>
-									<h2>Proyectos</h2>
-									<ul class="posts">
-										<li>
-											<article>
-												<header>
-													<h3><a href="http://rstextilnew.000webhostapp.com">R.S. Textil</a></h3>
-													<time class="published" datetime="2018-11-22">Noviembre 22, 2018</time>
-												</header>
-												<a href="single.php" class="image"><img src="images/nov/rs.png" alt="" /></a>
-											</article>
-										</li>
-									</ul>
-								</section>
+            <!-- Mini Posts -->
 
-							<!-- About -->
-								<section class="blurb">
-									<h2>Acerca de la Academia</h2>
-									<p><b>Objetivo de la licenciatura en Ciencias de la Informática</b></p>
-									<p align="justify">Preparar profesionistas informáticos con un perfil ejecutivo y emprendedor que emplee la información como recurso corporativo, para brindar soluciones competitivas mediante...</p>
-									<ul class="actions">
-										<li><a href="acer.php" class="button">Leer más</a></li>
-									</ul>
-								</section>
 
-							<!-- Footer -->
-								<section id="footer">
-									<h2>Redes Sociales</h2>
-									<ul class="icons">
+            <!-- Posts List -->
 
-										<!--
-										<li><a href="#" class="fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="#" class="fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="#" class="fa-rss"><span class="label">RSS</span></a></li>
-										<li><a href="#" class="fa-envelope"><span class="label">Email</span></a></li>
 
-										-->
+            <!-- About -->
 
-										<li><a href="https://www.facebook.com/ILBoficial/" class="fa-facebook"><span class="label">Facebook</span></a></li>
-									</ul>
-									<p class="copyright">&copy; CODNAK. Diseñado por: <a href="#">Astorga</a>.</p>
-								</section>
 
-						</section>
+            <!-- Footer -->
+              <section id="footer">
+                <h2>Redes Sociales</h2>
+                <ul class="icons">
+
+                  <!--
+                  <li><a href="#" class="fa-twitter"><span class="label">Twitter</span></a></li>
+                  <li><a href="#" class="fa-instagram"><span class="label">Instagram</span></a></li>
+                  <li><a href="#" class="fa-rss"><span class="label">RSS</span></a></li>
+                  <li><a href="#" class="fa-envelope"><span class="label">Email</span></a></li>
+
+                  -->
+
+                  <li><a href="https://www.facebook.com/ILBoficial/" class="fa-facebook"><span class="label">Facebook</span></a></li>
+                </ul>
+                <p class="copyright">&copy; CODNAK. Diseñado por: <a href="#">Astorga</a>.</p>
+              </section>
+
+          </section>
 
 				</div>
 

@@ -34,7 +34,7 @@ if(isset($_SESSION['u_usuario'])){
 						<nav class="links">
 							<ul>
                 <li><a href="alumno.php">Inicio</a></li>
-								<li><a href="mod.php">Modificar</a></li>
+								<li><a href="alumnomod.php">Modificar</a></li>
 								<li><a href="audi.php">Acceso Auditorio</a></li>
 								<li><a href="conlog.php">Contacto</a></li>
 								<?php
@@ -64,7 +64,7 @@ if(isset($_SESSION['u_usuario'])){
                   </a>
                 </li>
                 <li>
-                  <a href="mod.php">
+                  <a href="alumnomod.php">
                     <h3>Modificar</h3>
                     <p>Modifica datos de tu registro.</p>
                   </a>
@@ -111,12 +111,12 @@ if(isset($_SESSION['u_usuario'])){
 											<div class="col-6 col-12-xsmall">
                         <h4>*Grupo</h4>
 
-												<input type="text" name="grupo" id="demo-grupo" value="" placeholder="Escribe el grupo al que perteneces..." required/>
+												<input type="text" name="grupo" id="demo-grupo" value="" placeholder="1101 Li..." required/>
 											</div>
 
 											<div class="col-6 col-12-xsmall">
                         <h4>*Salón</h4>
-												<input type="text" name="salon" id="demo-salon" value="" placeholder="Escribe el salón al que perteneces..." required/>
+												<input type="text" name="salon" id="demo-salon" value="" placeholder="4 i..." required/>
 											</div>
 
                       <div class="col-6 col-12-xsmall">
@@ -170,7 +170,13 @@ if(isset($_SESSION['u_usuario'])){
 
 						<!-- Intro -->
 							<section id="intro">
-								<a href="index.php" class="logo"><div align="center"><img src="logo/info.png" alt="" /></div></a>
+								<a href="alumno.php" class="logo"><div align="center"><?php
+                  echo "<img src='images/archivos/alumnos/".$_SESSION['foto']."' width='30' height='30'>".'<br>'; ?>
+
+                  <?php
+                    echo "<img src='images/archivos/qr/".$_SESSION['Qr']."'>".'<br>'; ?>
+
+                </div></a>
 								<header>
 									<div align="center">
 

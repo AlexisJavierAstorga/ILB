@@ -29,6 +29,55 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/mainreg.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/foto.css">
 <!--===============================================================================================-->
+
+<script language="JavaScript">
+function CambiarFormulario(){
+	switch(document.forms[0].LISTA.selectedIndex){
+		case 0:
+			document.forms[0].file.disabled=true;
+			document.forms[0].nombre.disabled=true;
+			document.forms[0].app.disabled=true;
+			document.forms[0].apm.disabled=true;
+			document.forms[0].email.disabled=true;
+			document.forms[0].reg.disabled=true;
+			document.forms[0].password.disabled=true;
+			document.forms[0].confirm_password.disabled=true;
+			break;
+		case 1:
+		document.forms[0].file.disabled=false;
+		document.forms[0].nombre.disabled=false;
+		document.forms[0].app.disabled=false;
+		document.forms[0].apm.disabled=false;
+		document.forms[0].email.disabled=false;
+		document.forms[0].reg.disabled=false;
+		document.forms[0].password.disabled=true;
+		document.forms[0].confirm_password.disabled=true;
+			break;
+		case 2:
+		document.forms[0].file.disabled=false;
+		document.forms[0].nombre.disabled=false;
+		document.forms[0].app.disabled=false;
+		document.forms[0].apm.disabled=false;
+		document.forms[0].email.disabled=false;
+		document.forms[0].reg.disabled=false;
+		document.forms[0].password.disabled=false;
+		document.forms[0].confirm_password.disabled=false;
+			break;
+			case 4:
+			document.forms[0].file.disabled=false;
+			document.forms[0].nombre.disabled=false;
+			document.forms[0].app.disabled=false;
+			document.forms[0].apm.disabled=false;
+			document.forms[0].email.disabled=false;
+			document.forms[0].reg.disabled=false;
+			document.forms[0].password.disabled=false;
+			document.forms[0].confirm_password.disabled=false;
+				break;
+	}
+}
+
+</script>
+
 </head>
 <body style="background-color: #999999;">
 	<div id="popup" class="popup">
@@ -61,58 +110,58 @@
 
 					<div class="wrap-input100 validate-input" data-validate="Rol requerido">
 						<span class="label-input100">¿Cuál es tu rol en el proyecto?</span><br><br>
-						<select name="rol" required>
-					          <option value="">Selecciona tu ROL</option>
+						<select name="rol" id="LISTA" onChange="CambiarFormulario()" required>
+					          <option selected>Selecciona tu ROL</option>
+										<option value="maestro">Maestro</option>
 					          <option value="lider">Líder</option>
-										<option value="cola">Colaborador</option>
+										<option value="colaborador">Colaborador</option>
 					          <!--option value="2">Estado de mexico</option -->
 					   </select>
 						 <span class="focus-input100"></span>
 					</div>
 
+
 					<div class="wrap-input100 validate-input" data-validate="Nombre requerido">
 						<span class="label-input100" >Nombre (s):</span>
-						<input class="input100" type="text" name="username" placeholder="Nombre(s)..." required>
+						<input class="input100" type="text" name="username" placeholder="Nombre(s)..." id="nombre" required>
 						<span class="focus-input100"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate="Apellido paterno requerido">
 						<span class="label-input100">Apellido paterno:</span>
-						<input class="input100" type="text" name="apellidoPat" placeholder="Apellido paterno..." required>
+						<input class="input100" type="text" name="apellidoPat" placeholder="Apellido paterno..." id="app" required>
 						<span class="focus-input100"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate="Apellido materno requerido">
 						<span class="label-input100">Apellido materno:</span>
-						<input class="input100" type="text" name="apellidoMat" placeholder="Apellido materno..." required>
+						<input class="input100" type="text" name="apellidoMat" placeholder="Apellido materno..." id="apm" required>
 						<span class="focus-input100"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate = "Para correo válido es con minúsculas">
 						<span class="label-input100">Correo:</span>
-						<input class="input100" type="text" name="email" placeholder="ejemplo@outlook.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+						<input class="input100" type="text" name="email" placeholder="ejemplo@outlook.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" id="email" required>
 						<span class="focus-input100"></span>
 					</div>
-
-					<div id="qr" name="qr"></div>
 
 					<div class="wrap-input100 validate-input" data-validate = "Debe contener al menos un número, una letra mayúscula y minúscula, con 8 caracteres como máximo.">
 						<span class="label-input100">Contraseña:</span><br>
 						<span class="label-input100" style="font-size:9pt;">(Debe contener al menos un número, una letra mayúscula y minúscula; y mayor o igual a 8 caracteres.)</span>
-						<input class="input100" type="password" name="password" id="password" placeholder="*************" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Debe contener al menos un número, una letra mayúscula y minúscula; y mayor o igual a 8 caracteres." required>
+						<input class="input100" type="password" name="password" id="password" placeholder="*************" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Debe contener al menos un número, una letra mayúscula y minúscula; y mayor o igual a 8 caracteres." value="" required>
 						<span class="focus-input100"></span>
 					</div>
 
 					<div class="wrap-input100" data-validate = "Repetir contraseña requerido">
 						<span class="label-input100">Repite la contraseña:</span>
-						<input class="input100" type="password" name="repeat-pass" id="confirm_password" placeholder="*************" required>
+						<input class="input100" type="password" name="repeat-pass" id="confirm_password" placeholder="*************" value="" required>
 						<span class="focus-input100"></span>
 					</div>
 
 					<div class="container-login100-form-btn">
 						<div class="wrap-login100-form-btn">
 							<div class="login100-form-bgbtn"></div>
-							<button class="login100-form-btn" onclick="update_qrcode()">
+							<button class="login100-form-btn" id="reg" name="generar">
 								REGISTRAR
 							</button>
 						</div>
@@ -146,9 +195,8 @@
 <!--===============================================================================================-->
 	<script src="assets/js/mainreg.js"></script>
 	<script src="assets/js/foto.js"></script>
-	<script src="assets/js/qrcode.js"></script>
 
-	
+
 
 </body>
 </html>
