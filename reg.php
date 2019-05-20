@@ -1,202 +1,269 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-	<title>Auditorio ILB</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-<!--===============================================================================================-->
-	<link rel="icon" type="image/png" href="logo/info.png"/>
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap/css/bootstrap.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="assets/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="assets/fonts/iconic/css/material-design-iconic-font.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="assets/vendor/animate/animate.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="assets/vendor/css-hamburgers/hamburgers.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="assets/vendor/animsition/css/animsition.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="assets/vendor/select2/select2.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="assets/vendor/daterangepicker/daterangepicker.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="assets/css/util.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/mainreg.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/foto.css">
-<!--===============================================================================================-->
+<!DOCTYPE HTML>
+<!--
+	Dimension by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Auditorio ILB</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="reg/assets/css/main.css" />
+		<link rel="shortcut icon" href="logo/info.png" type="image/x-icon">
+	</head>
+	<body class="is-preload">
 
-<script language="JavaScript">
-function CambiarFormulario(){
-	switch(document.forms[0].LISTA.selectedIndex){
-		case 0:
-			document.forms[0].file.disabled=true;
-			document.forms[0].nombre.disabled=true;
-			document.forms[0].app.disabled=true;
-			document.forms[0].apm.disabled=true;
-			document.forms[0].email.disabled=true;
-			document.forms[0].reg.disabled=true;
-			document.forms[0].password.disabled=true;
-			document.forms[0].confirm_password.disabled=true;
-			break;
-		case 1:
-		document.forms[0].file.disabled=false;
-		document.forms[0].nombre.disabled=false;
-		document.forms[0].app.disabled=false;
-		document.forms[0].apm.disabled=false;
-		document.forms[0].email.disabled=false;
-		document.forms[0].reg.disabled=false;
-		document.forms[0].password.disabled=true;
-		document.forms[0].confirm_password.disabled=true;
-			break;
-		case 2:
-		document.forms[0].file.disabled=false;
-		document.forms[0].nombre.disabled=false;
-		document.forms[0].app.disabled=false;
-		document.forms[0].apm.disabled=false;
-		document.forms[0].email.disabled=false;
-		document.forms[0].reg.disabled=false;
-		document.forms[0].password.disabled=false;
-		document.forms[0].confirm_password.disabled=false;
-			break;
-			case 4:
-			document.forms[0].file.disabled=false;
-			document.forms[0].nombre.disabled=false;
-			document.forms[0].app.disabled=false;
-			document.forms[0].apm.disabled=false;
-			document.forms[0].email.disabled=false;
-			document.forms[0].reg.disabled=false;
-			document.forms[0].password.disabled=false;
-			document.forms[0].confirm_password.disabled=false;
-				break;
-	}
-}
+		<!-- Wrapper -->
+			<div id="wrapper">
 
-</script>
-
-</head>
-<body style="background-color: #999999;">
-	<div id="popup" class="popup">
-	    <a onclick="closeDialog('popup');" class="close"></a>
-	    <div>
-	        <!-- YOUR CONTENT -->
-	    </div>
-	</div>
-	<div class="limiter">
-		<div class="container-login100">
-			<div class="login100-more" style="background-image: url('images/bg-01.jpg');"></div>
-
-
-			<div class="wrap-login100 p-l-50 p-r-50 p-t-72 p-b-50">
-				<form action="registrar.php" method="post" TARGET="_parent" class="login100-form validate-form" enctype="multipart/form-data">
-					<a href="index.php" class="dis-block txt3 hov1 p-r-30 p-t-10 p-b-10 p-l-30">
-						<i class="fa fa-long-arrow-left m-l-5"></i>
-						Regresar
-					</a>
-					<span class="login100-form-title p-b-59">
-						Registro
-					</span>
-
-					<div class="wrap-input100 validate-input" data-validate="Rol requerido">
-					<span class="label-input100">Inserta la foto para tu gafete: </span><br><br>
-					<input id="file" type="file" name="foto" required/><br><br>
-						<div id="preview">DIMENSIONES 2.5X3 cm</div>
-						<span class="focus-input100"></span>
-					</div>
-
-					<div class="wrap-input100 validate-input" data-validate="Rol requerido">
-						<span class="label-input100">¿Cuál es tu rol en el proyecto?</span><br><br>
-						<select name="rol" id="LISTA" onChange="CambiarFormulario()" required>
-					          <option selected>Selecciona tu ROL</option>
-										<option value="maestro">Maestro</option>
-					          <option value="lider">Líder</option>
-										<option value="colaborador">Colaborador</option>
-					          <!--option value="2">Estado de mexico</option -->
-					   </select>
-						 <span class="focus-input100"></span>
-					</div>
-
-
-					<div class="wrap-input100 validate-input" data-validate="Nombre requerido">
-						<span class="label-input100" >Nombre (s):</span>
-						<input class="input100" type="text" name="username" placeholder="Nombre(s)..." id="nombre" required>
-						<span class="focus-input100"></span>
-					</div>
-
-					<div class="wrap-input100 validate-input" data-validate="Apellido paterno requerido">
-						<span class="label-input100">Apellido paterno:</span>
-						<input class="input100" type="text" name="apellidoPat" placeholder="Apellido paterno..." id="app" required>
-						<span class="focus-input100"></span>
-					</div>
-
-					<div class="wrap-input100 validate-input" data-validate="Apellido materno requerido">
-						<span class="label-input100">Apellido materno:</span>
-						<input class="input100" type="text" name="apellidoMat" placeholder="Apellido materno..." id="apm" required>
-						<span class="focus-input100"></span>
-					</div>
-
-					<div class="wrap-input100 validate-input" data-validate = "Para correo válido es con minúsculas">
-						<span class="label-input100">Correo:</span>
-						<input class="input100" type="text" name="email" placeholder="ejemplo@outlook.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" id="email" required>
-						<span class="focus-input100"></span>
-					</div>
-
-					<div class="wrap-input100 validate-input" data-validate = "Debe contener al menos un número, una letra mayúscula y minúscula, con 8 caracteres como máximo.">
-						<span class="label-input100">Contraseña:</span><br>
-						<span class="label-input100" style="font-size:9pt;">(Debe contener al menos un número, una letra mayúscula y minúscula; y mayor o igual a 8 caracteres.)</span>
-						<input class="input100" type="password" name="password" id="password" placeholder="*************" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Debe contener al menos un número, una letra mayúscula y minúscula; y mayor o igual a 8 caracteres." value="" required>
-						<span class="focus-input100"></span>
-					</div>
-
-					<div class="wrap-input100" data-validate = "Repetir contraseña requerido">
-						<span class="label-input100">Repite la contraseña:</span>
-						<input class="input100" type="password" name="repeat-pass" id="confirm_password" placeholder="*************" value="" required>
-						<span class="focus-input100"></span>
-					</div>
-
-					<div class="container-login100-form-btn">
-						<div class="wrap-login100-form-btn">
-							<div class="login100-form-bgbtn"></div>
-							<button class="login100-form-btn" id="reg" name="generar">
-								REGISTRAR
-							</button>
+				<!-- Header -->
+					<header id="header">
+						<div class="logo">
+							<span class="icon fa-users"></span>
 						</div>
+						<div class="content">
+							<div class="inner">
+								<h1>Bienvenid@</h1>
+								<p>Les recordamos que si no tienen una cuenta ¡realicenla!, los INVITADOS también pueden asistir al evento solo regístrense.<br/>
+								Si tienen dudas de como realizar su registro <a href="duda.php">CLICK AQUÍ</a> para resolver tus dudas.</p>
+							</div>
+						</div>
+						<nav>
+							<ul>
+								<li><a href="#intro">Alumnos</a></li>
+								<li><a href="#work">Invitados</a></li>
+								<li><a href="#about">Maestros</a></li>
+								<li><a href="#contact">Login</a></li>
+								<!--<li><a href="#elements">Elements</a></li>-->
+							</ul>
+						</nav>
+							<div class="content">
+							</div>
+							<nav>
+								<ul>
+									<li><a href="index.php">Salir</a></li>
+									<!--<li><a href="#elements">Elements</a></li>-->
+								</ul>
+							</nav>
 
-						<a href="login.php" class="dis-block txt3 hov1 p-r-30 p-t-10 p-b-10 p-l-30">
-							INICIAR SESIÓN
-							<i class="fa fa-long-arrow-right m-l-5"></i>
-						</a>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Intro -->
+							<article id="intro">
+								<h2 class="major">Registro Alumnos</h2>
+								<form method="post" action="#">
+									<div class="fields">
+										<div class="field half">
+											<label for="name">Foto para gafete</label>
+											<input id="file" type="file" name="foto" required/>
+										</div>
+										<div class="field half">
+											<label for="name">Nombre</label>
+											<input type="text" name="name" id="name" placeholder="Escribe tu nombre" required/>
+										</div>
+										<div class="field half">
+											<label for="name">Apellido Paterno</label>
+											<input type="text" name="name" id="name" placeholder="Escribe tu apellido paterno" required/>
+										</div>
+										<div class="field half">
+											<label for="name">Apellido Materno</label>
+											<input type="text" name="name" id="name" placeholder="Escribe tu apellido materno" required/>
+										</div>
+										<div class="field half">
+											<label for="name">Grupo</label>
+											<select name="grupo" id="LISTA" required>
+										          <option value="" selected disabled>Grupos</option>
+															<option value="1101">1101</option>
+										          <option value="1201">1201</option>
+															<option value="1301">1301</option>
+															<option value="1401">1401</option>
+															<option value="1501">1501</option>
+															<option value="1601">1601</option>
+															<option value="1701">1701</option>
+															<option value="1801">1801</option>
+										          <!--option value="2">Estado de mexico</option -->
+										   </select>
+										</div>
+										<div class="field half">
+											<label for="name">Grado</label>
+											<select name="grado" id="LISTA" required>
+															<option value="" selected disabled>Nieveles</option>
+															<option value="Licenciatura">Licenciatura</option>
+															<option value="Bachillerato">Bachillerato</option>
+															<!--option value="2">Estado de mexico</option -->
+											 </select>
+										</div>
+										<div class="field half">
+											<label for="name">Cargo</label>
+											<select name="id_categoria" id="id_categoria" required>
+															<option value="" selected disabled>Rol</option>
+															<option value="Lider">Líder</option>
+															<option value="Otro">Otro</option>
+															<!--option value="2">Estado de mexico</option -->
+											 </select>
+										</div>
+										<div class="field half">
+											<label for="name">Puesto</label>
+											<input type="text" name="name" id="id_input" placeholder="Especifica tu cargo" disabled required/>
+										</div>
+										<div class="field half">
+											<label for="email">Correo</label>
+											<input type="text" name="email" id="email" placeholder="ejemplo@hotmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required/>
+										</div>
+										<div class="field half">
+											<label for="email">Contraseña</label>
+											<input type="password" name="password" id="password" title="Recuerda bien tu contraseña." value="" required/>
+										</div>
+										<div class="field half">
+											<label for="email">Confirmar contraseña</label>
+											<input type="password" name="repeat-pass" id="confirm_password" value="" required/>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Registrar" class="primary" /></li>
+										<li><input type="reset" value="Limpiar" /></li>
+									</ul>
+								</form>
+							</article>
+
+						<!-- Work -->
+							<article id="work">
+								<h2 class="major">Registro Invitados</h2>
+								<form method="post" action="#">
+									<div class="fields">
+										<div class="field half">
+											<label for="name">Foto para gafete</label>
+											<input id="file" type="file" name="foto" required/>
+										</div>
+										<div class="field half">
+											<label for="name">Nombre</label>
+											<input type="text" name="name" id="name" placeholder="Escribe tu nombre" required/>
+										</div>
+										<div class="field half">
+											<label for="name">Apellido Paterno</label>
+											<input type="text" name="name" id="name" placeholder="Escribe tu apellido paterno" required/>
+										</div>
+										<div class="field half">
+											<label for="name">Apellido Materno</label>
+											<input type="text" name="name" id="name" placeholder="Escribe tu apellido materno" required/>
+										</div>
+										<div class="field half">
+											<label for="email">Correo</label>
+											<input type="text" name="email" id="email" placeholder="ejemplo@hotmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required/>
+										</div>
+										<div class="field half">
+											<label for="name">Equipo a visitar</label>
+											<select name="rol" id="LISTA" onChange="CambiarFormulario()" required>
+										          <option selected>Equipos</option>
+															<option value="maestro">Maestro</option>
+										          <option value="lider">Líder</option>
+															<option value="colaborador">Colaborador</option>
+										          <!--option value="2">Estado de mexico</option -->
+										   </select>
+										</div>
+										<div class="field half">
+											<label for="email">Contraseña</label>
+											<input type="password" name="password" id="password" title="Recuerda bien tu contraseña." value="" required/>
+										</div>
+										<div class="field half">
+											<label for="email">Confirmar contraseña</label>
+											<input type="password" name="repeat-pass" id="confirm_password" value="" required/>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Registrar" class="primary" /></li>
+										<li><input type="reset" value="Limpiar" /></li>
+									</ul>
+								</form>
+							</article>
+
+						<!-- About -->
+							<article id="about">
+								<h2 class="major">Registro Maestros</h2>
+								<form method="post" action="#">
+									<div class="fields">
+										<div class="field half">
+											<label for="name">Foto para gafete</label>
+											<input id="file" type="file" name="foto" required/>
+										</div>
+										<div class="field half">
+											<label for="name">Nombre</label>
+											<input type="text" name="name" id="name" placeholder="Escribe tu nombre" required/>
+										</div>
+										<div class="field half">
+											<label for="name">Apellido Paterno</label>
+											<input type="text" name="name" id="name" placeholder="Escribe tu apellido paterno" required/>
+										</div>
+										<div class="field half">
+											<label for="name">Apellido Materno</label>
+											<input type="text" name="name" id="name" placeholder="Escribe tu apellido materno" required/>
+										</div>
+										<div class="field half">
+											<label for="email">Correo</label>
+											<input type="text" name="email" id="email" placeholder="ejemplo@hotmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required/>
+										</div>
+										<div class="field half">
+											<label for="email">Contraseña</label>
+											<input type="password" name="password" id="password" title="Recuerda bien tu contraseña." value="" required/>
+										</div>
+										<div class="field half">
+											<label for="email">Confirmar contraseña</label>
+											<input type="password" name="repeat-pass" id="confirm_password" value="" required/>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Registrar" class="primary" /></li>
+										<li><input type="reset" value="Limpiar" /></li>
+									</ul>
+								</form>
+							</article>
+
+						<!-- Contact -->
+							<article id="contact">
+								<h2 class="major">Iniciar Sesión</h2>
+								<form method="post" action="#">
+									<div class="fields">
+										<div class="field half">
+											<label for="name">Correo</label>
+											<input type="text" name="email" required />
+										</div>
+										<div class="field half">
+											<label for="email">Contraseña</label>
+											<input type="password" name="password" required />
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Iniciar Sesión" class="primary" /></li>
+									</ul>
+								</form>
+							</article>
+
+						<!-- Elements -->
+
+
 					</div>
-				</form>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">Desarrollado por: Alexis Astorga</p>
+					</footer>
+
 			</div>
-		</div>
-	</div>
 
-<!--===============================================================================================-->
-	<script src="assets/vendor/jquery/jquery-3.2.1.min.js"></script>
-<!--===============================================================================================-->
-	<script src="assets/js/passconf.js"></script>
-<!--===============================================================================================-->
-	<script src="assets/vendor/animsition/js/animsition.min.js"></script>
-<!--===============================================================================================-->
-	<script src="assets/vendor/bootstrap/js/popper.js"></script>
-	<script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
-<!--===============================================================================================-->
-	<script src="assets/vendor/select2/select2.min.js"></script>
-<!--===============================================================================================-->
-	<script src="assets/vendor/daterangepicker/moment.min.js"></script>
-	<script src="assets/vendor/daterangepicker/daterangepicker.js"></script>
-<!--===============================================================================================-->
-	<script src="assets/vendor/countdowntime/countdowntime.js"></script>
-<!--===============================================================================================-->
-	<script src="assets/js/mainreg.js"></script>
-	<script src="assets/js/foto.js"></script>
+		<!-- BG -->
+			<div id="bg"></div>
 
-
-
-</body>
+		<!-- Scripts -->
+			<script src="reg/assets/js/jquery.min.js"></script>
+			<script src="reg/assets/js/browser.min.js"></script>
+			<script src="reg/assets/js/breakpoints.min.js"></script>
+			<script src="reg/assets/js/util.js"></script>
+			<script src="reg/assets/js/main.js"></script>
+			<script src="reg/assets/js/passconf.js"></script>
+			<script src="reg/assets/js/alu_reg.js"></script>
+	</body>
 </html>

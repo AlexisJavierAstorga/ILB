@@ -490,7 +490,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 												<h3><a href="http://rstextilnew.000webhostapp.com">R.S. Textil</a></h3>
 												<time class="published" datetime="2018-11-22">Noviembre 22, 2018</time>
 											</header>
-											<a href="single.php" class="image"><img src="images/nov/rs.png" alt="" /></a>
+											<a href="http://rstextilnew.000webhostapp.com" class="image"><img src="images/nov/rs.png" alt="" /></a>
 										</article>
 									</li>
 								</ul>
