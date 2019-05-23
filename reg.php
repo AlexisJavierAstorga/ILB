@@ -55,10 +55,10 @@
 						<!-- Intro -->
 							<article id="intro">
 								<h2 class="major">Registro Alumnos</h2>
-								<form method="post" action="#">
+								<form action="reg_alu.php" method="post" enctype="multipart/form-data">
 									<div class="fields">
 										<div class="field half">
-											<label for="name">Foto para gafete</label>
+											<label for="foto">Foto para gafete</label>
 											<input id="file" type="file" name="foto" required/>
 										</div>
 										<div class="field half">
@@ -67,11 +67,11 @@
 										</div>
 										<div class="field half">
 											<label for="name">Apellido Paterno</label>
-											<input type="text" name="name" id="name" placeholder="Escribe tu apellido paterno" required/>
+											<input type="text" name="app" id="name" placeholder="Escribe tu apellido paterno" required/>
 										</div>
 										<div class="field half">
 											<label for="name">Apellido Materno</label>
-											<input type="text" name="name" id="name" placeholder="Escribe tu apellido materno" required/>
+											<input type="text" name="apm" id="name" placeholder="Escribe tu apellido materno" required/>
 										</div>
 										<div class="field half">
 											<label for="name">Grupo</label>
@@ -108,7 +108,7 @@
 										</div>
 										<div class="field half">
 											<label for="name">Puesto</label>
-											<input type="text" name="name" id="id_input" placeholder="Especifica tu cargo" disabled required/>
+											<input type="text" name="puesto" id="id_input" placeholder="Especifica tu cargo" disabled required/>
 										</div>
 										<div class="field half">
 											<label for="email">Correo</label>
@@ -124,7 +124,7 @@
 										</div>
 									</div>
 									<ul class="actions">
-										<li><input type="submit" value="Registrar" class="primary" /></li>
+										<li><input type="submit" value="Registrar" name="btn" class="primary" /></li>
 										<li><input type="reset" value="Limpiar" /></li>
 									</ul>
 								</form>
@@ -133,7 +133,7 @@
 						<!-- Work -->
 							<article id="work">
 								<h2 class="major">Registro Invitados</h2>
-								<form method="post" action="#">
+								<form method="post" action="#" enctype="multipart/form-data">
 									<div class="fields">
 										<div class="field half">
 											<label for="name">Foto para gafete</label>
@@ -145,11 +145,11 @@
 										</div>
 										<div class="field half">
 											<label for="name">Apellido Paterno</label>
-											<input type="text" name="name" id="name" placeholder="Escribe tu apellido paterno" required/>
+											<input type="text" name="app" id="name" placeholder="Escribe tu apellido paterno" required/>
 										</div>
 										<div class="field half">
 											<label for="name">Apellido Materno</label>
-											<input type="text" name="name" id="name" placeholder="Escribe tu apellido materno" required/>
+											<input type="text" name="apm" id="name" placeholder="Escribe tu apellido materno" required/>
 										</div>
 										<div class="field half">
 											<label for="email">Correo</label>
@@ -157,7 +157,7 @@
 										</div>
 										<div class="field half">
 											<label for="name">Equipo a visitar</label>
-											<select name="rol" id="LISTA" onChange="CambiarFormulario()" required>
+											<select name="eqv" id="LISTA" onChange="CambiarFormulario()" required>
 										          <option selected>Equipos</option>
 															<option value="maestro">Maestro</option>
 										          <option value="lider">Líder</option>
@@ -175,7 +175,7 @@
 										</div>
 									</div>
 									<ul class="actions">
-										<li><input type="submit" value="Registrar" class="primary" /></li>
+										<li><input type="submit" value="Registrar" class="primary" name="btn-2"/></li>
 										<li><input type="reset" value="Limpiar" /></li>
 									</ul>
 								</form>
@@ -184,7 +184,7 @@
 						<!-- About -->
 							<article id="about">
 								<h2 class="major">Registro Maestros</h2>
-								<form method="post" action="#">
+								<form method="post" action="#" enctype="multipart/form-data">
 									<div class="fields">
 										<div class="field half">
 											<label for="name">Foto para gafete</label>
@@ -196,11 +196,11 @@
 										</div>
 										<div class="field half">
 											<label for="name">Apellido Paterno</label>
-											<input type="text" name="name" id="name" placeholder="Escribe tu apellido paterno" required/>
+											<input type="text" name="app" id="name" placeholder="Escribe tu apellido paterno" required/>
 										</div>
 										<div class="field half">
 											<label for="name">Apellido Materno</label>
-											<input type="text" name="name" id="name" placeholder="Escribe tu apellido materno" required/>
+											<input type="text" name="apm" id="name" placeholder="Escribe tu apellido materno" required/>
 										</div>
 										<div class="field half">
 											<label for="email">Correo</label>
@@ -216,7 +216,7 @@
 										</div>
 									</div>
 									<ul class="actions">
-										<li><input type="submit" value="Registrar" class="primary" /></li>
+										<li><input type="submit" value="Registrar" class="primary" name="btn-3"/></li>
 										<li><input type="reset" value="Limpiar" /></li>
 									</ul>
 								</form>
