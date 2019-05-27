@@ -27,9 +27,9 @@
 					<nav class="links">
 						<ul>
 							<li><a href="index.php">Inicio</a></li>
-							<li><a href="reg.php">Registrar</a></li>
+							<li><a href="reg.php">Registrar / NICIAR SESIÓN</a></li>
 							<li><a href="con.php">Contacto</a></li>
-							<li><a href="login.php">INICIAR SESIÓN</a></li>
+							<!-- comienza otro menu -->
 						</ul>
 					</nav>
 					<nav class="main">
