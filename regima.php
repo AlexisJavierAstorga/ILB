@@ -12,7 +12,7 @@ $comentario = $_POST ['comen'];
 	//move_uploaded_file($tmp_archivo, $folder.'/'. $nombre_archivo);
 
 
-	$insertar = "INSERT INTO imagen (foto, comentario) values ('$folder', '$comentario')";
+	$insertar = "INSERT INTO imagen (foto, comentario, otro) values ('$folder', '$comentario', '$otro')";
 
 $verificar_usuario = mysqli_query($con, "SELECT * FROM imagen WHERE comentario = '$comentario'");
 if (mysqli_num_rows($verificar_usuario) > 0){

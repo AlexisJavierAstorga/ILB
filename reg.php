@@ -29,19 +29,21 @@
 								Si tienen dudas de como realizar su registro <a href="duda.php">CLICK AQUÍ</a> para resolver tus dudas.</p>
 							</div>
 						</div>
-						<nav>
+						<nav>Registros
 							<ul>
 								<li><a href="#intro">Alumnos</a></li>
 								<li><a href="#work">Invitados</a></li>
 								<li><a href="#about">Maestros</a></li>
-								<li><a href="#contact">Login</a></li>
 								<!--<li><a href="#elements">Elements</a></li>-->
 							</ul>
 						</nav>
 							<div class="content">
 							</div>
-							<nav>
+							<nav>Inicio de Sesiones
 								<ul>
+									<li><a href="#contact">Login Alumno</a></li>
+									<li><a href="#contact2">Login Maestro</a></li>
+									<li><a href="#contact3">Login Invitado</a></li>
 									<li><a href="index.php">Salir</a></li>
 									<!--<li><a href="#elements">Elements</a></li>-->
 								</ul>
@@ -63,15 +65,15 @@
 										</div>
 										<div class="field half">
 											<label for="name">Nombre</label>
-											<input type="text" name="name" id="name" placeholder="Escribe tu nombre" required/>
+											<input type="text" name="name" id="name" placeholder="Escribe tu nombre" pattern="[A-Za-z0-9_-]{1,30}" required/>
 										</div>
 										<div class="field half">
 											<label for="name">Apellido Paterno</label>
-											<input type="text" name="app" id="name" placeholder="Escribe tu apellido paterno" required/>
+											<input type="text" name="app" id="name" placeholder="Escribe tu apellido paterno" pattern="[A-Za-z0-9_-]{1,30}" required/>
 										</div>
 										<div class="field half">
 											<label for="name">Apellido Materno</label>
-											<input type="text" name="apm" id="name" placeholder="Escribe tu apellido materno" required/>
+											<input type="text" name="apm" id="name" placeholder="Escribe tu apellido materno" pattern="[A-Za-z0-9_-]{1,30}" required/>
 										</div>
 										<div class="field half">
 											<label for="name">Grupo</label>
@@ -100,7 +102,7 @@
 										<div class="field half">
 											<label for="name">Cargo</label>
 											<select name="id_categoria" id="id_categoria" required>
-															<option value="" selected disabled>Rol</option>
+															<option value="" selected disabled>Selecciona tu Rol</option>
 															<option value="Lider">Líder</option>
 															<option value="Otro">Otro</option>
 															<!--option value="2">Estado de mexico</option -->
@@ -108,7 +110,21 @@
 										</div>
 										<div class="field half">
 											<label for="name">Puesto</label>
-											<input type="text" name="puesto" id="id_input" placeholder="Especifica tu cargo" disabled required/>
+											<select name="puesto" id="id_input" required>
+															<option value="-" selected>Selecciona tu Puesto</option>
+															<option value="Administrador de Proyectos">Administrador de Proyectos</option>
+															<option value="Sponsor">Sponsor</option>
+															<option value="Analista de Sistemas">Analista de Sistemas</option>
+															<option value="Diseñador de Sistemas">Diseñador de Sistemas</option>
+															<option value="Base de datos">Base de Datos</option>
+															<option value="Programador SeniorSenior lo más">Programador Senior</option>
+															<option value="Programador Junior">Programador Junior</option>
+															<option value="Programador Web">Programador Web</option>
+															<option value="Tester de Sistemas">Tester de Sistemas</option>
+															<option value="Staff">Staff</option>
+															<option value="Business Intelligence">Business Intelligence</option>
+															<!--option value="2">Estado de mexico</option -->
+											 </select>
 										</div>
 										<div class="field half">
 											<label for="email">Correo</label>
@@ -116,11 +132,11 @@
 										</div>
 										<div class="field half">
 											<label for="email">Contraseña</label>
-											<input type="password" name="password" id="password" title="Recuerda bien tu contraseña." value="" required/>
+											<input type="password" name="password" id="password" title="Recuerda bien tu contraseña." value="" pattern="[A-Za-z0-9_-]{1,30}" required/>
 										</div>
 										<div class="field half">
 											<label for="email">Confirmar contraseña</label>
-											<input type="password" name="repeat-pass" id="confirm_password" value="" required/>
+											<input type="password" name="repeat-pass" id="confirm_password" value="" pattern="[A-Za-z0-9_-]{1,30}" required/>
 										</div>
 									</div>
 									<ul class="actions">
@@ -133,7 +149,7 @@
 						<!-- Work -->
 							<article id="work">
 								<h2 class="major">Registro Invitados</h2>
-								<form method="post" action="#" enctype="multipart/form-data">
+								<form method="post" action="reg_inv.php" enctype="multipart/form-data">
 									<div class="fields">
 										<div class="field half">
 											<label for="name">Foto para gafete</label>
@@ -141,15 +157,15 @@
 										</div>
 										<div class="field half">
 											<label for="name">Nombre</label>
-											<input type="text" name="name" id="name" placeholder="Escribe tu nombre" required/>
+											<input type="text" name="name" id="name" placeholder="Escribe tu nombre" pattern="[A-Za-z0-9_-]{1,30}" required/>
 										</div>
 										<div class="field half">
 											<label for="name">Apellido Paterno</label>
-											<input type="text" name="app" id="name" placeholder="Escribe tu apellido paterno" required/>
+											<input type="text" name="app" id="name" placeholder="Escribe tu apellido paterno" pattern="[A-Za-z0-9_-]{1,30}" required/>
 										</div>
 										<div class="field half">
 											<label for="name">Apellido Materno</label>
-											<input type="text" name="apm" id="name" placeholder="Escribe tu apellido materno" required/>
+											<input type="text" name="apm" id="name" placeholder="Escribe tu apellido materno" pattern="[A-Za-z0-9_-]{1,30}" required/>
 										</div>
 										<div class="field half">
 											<label for="email">Correo</label>
@@ -157,21 +173,29 @@
 										</div>
 										<div class="field half">
 											<label for="name">Equipo a visitar</label>
-											<select name="eqv" id="LISTA" onChange="CambiarFormulario()" required>
-										          <option selected>Equipos</option>
-															<option value="maestro">Maestro</option>
-										          <option value="lider">Líder</option>
-															<option value="colaborador">Colaborador</option>
+											<select name="eqv" id="LISTA" required>
+												<option value="-" selected>Selecciona el equipo</option>
+										          <?php
+																include("conexion.php");
+																	$sql = "SELECT * FROM proyectos";
+																	$rec = mysqli_query($con, $sql);
+																	while ($row=mysqli_fetch_array($rec)) {
+																		echo "<option>";
+																		echo $row['consultoria'];
+																		echo "</option>";
+																		// code...
+																	}
+															 ?>
 										          <!--option value="2">Estado de mexico</option -->
 										   </select>
 										</div>
 										<div class="field half">
 											<label for="email">Contraseña</label>
-											<input type="password" name="password" id="password" title="Recuerda bien tu contraseña." value="" required/>
+											<input type="password" name="password" id="password" title="Recuerda bien tu contraseña." pattern="[A-Za-z0-9_-]{1,30}" value="" required/>
 										</div>
 										<div class="field half">
 											<label for="email">Confirmar contraseña</label>
-											<input type="password" name="repeat-pass" id="confirm_password" value="" required/>
+											<input type="password" name="repeat-pass" id="confirm_password" value="" pattern="[A-Za-z0-9_-]{1,30}" required/>
 										</div>
 									</div>
 									<ul class="actions">
@@ -184,7 +208,7 @@
 						<!-- About -->
 							<article id="about">
 								<h2 class="major">Registro Maestros</h2>
-								<form method="post" action="#" enctype="multipart/form-data">
+								<form method="post" action="reg_maes.php" enctype="multipart/form-data">
 									<div class="fields">
 										<div class="field half">
 											<label for="name">Foto para gafete</label>
@@ -192,15 +216,15 @@
 										</div>
 										<div class="field half">
 											<label for="name">Nombre</label>
-											<input type="text" name="name" id="name" placeholder="Escribe tu nombre" required/>
+											<input type="text" name="name" id="name" placeholder="Escribe tu nombre" pattern="[A-Za-z0-9_-]{1,30}" required/>
 										</div>
 										<div class="field half">
 											<label for="name">Apellido Paterno</label>
-											<input type="text" name="app" id="name" placeholder="Escribe tu apellido paterno" required/>
+											<input type="text" name="app" id="name" placeholder="Escribe tu apellido paterno" pattern="[A-Za-z0-9_-]{1,30}" required/>
 										</div>
 										<div class="field half">
 											<label for="name">Apellido Materno</label>
-											<input type="text" name="apm" id="name" placeholder="Escribe tu apellido materno" required/>
+											<input type="text" name="apm" id="name" placeholder="Escribe tu apellido materno" pattern="[A-Za-z0-9_-]{1,30}" required/>
 										</div>
 										<div class="field half">
 											<label for="email">Correo</label>
@@ -208,11 +232,15 @@
 										</div>
 										<div class="field half">
 											<label for="email">Contraseña</label>
-											<input type="password" name="password" id="password" title="Recuerda bien tu contraseña." value="" required/>
+											<input type="password" name="password" id="password" title="Recuerda bien tu contraseña." pattern="[A-Za-z0-9_-]{1,30}" value="" required/>
 										</div>
 										<div class="field half">
 											<label for="email">Confirmar contraseña</label>
-											<input type="password" name="repeat-pass" id="confirm_password" value="" required/>
+											<input type="password" name="repeat-pass" id="confirm_password" value="" pattern="[A-Za-z0-9_-]{1,30}" required/>
+										</div>
+										<div class="field half">
+											<label for="email">PIN de maestros</label>
+											<input type="password" name="pin" id="password" title="Recuerda bien tu contraseña." pattern="5678987654323ILB" value="" required/>
 										</div>
 									</div>
 									<ul class="actions">
@@ -224,16 +252,52 @@
 
 						<!-- Contact -->
 							<article id="contact">
-								<h2 class="major">Iniciar Sesión</h2>
-								<form method="post" action="#">
+								<h2 class="major">Iniciar Sesión Alumno</h2>
+								<form method="post" action="existe.php">
 									<div class="fields">
 										<div class="field half">
 											<label for="name">Correo</label>
-											<input type="text" name="email" required />
+											<input type="text" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required />
 										</div>
 										<div class="field half">
 											<label for="email">Contraseña</label>
-											<input type="password" name="password" required />
+											<input type="password" name="password" pattern="[A-Za-z0-9_-]{1,30}" required />
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Iniciar Sesión" class="primary" /></li>
+									</ul>
+								</form>
+							</article>
+							<article id="contact2">
+								<h2 class="major">Iniciar Sesión Maestro</h2>
+								<form method="post" action="existe2.php">
+									<div class="fields">
+										<div class="field half">
+											<label for="name">Correo</label>
+											<input type="text" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required />
+										</div>
+										<div class="field half">
+											<label for="email">Contraseña</label>
+											<input type="password" name="password" pattern="[A-Za-z0-9_-]{1,30}" required />
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Iniciar Sesión" class="primary" /></li>
+									</ul>
+								</form>
+							</article>
+							<article id="contact3">
+								<h2 class="major">Iniciar Sesión Invitado</h2>
+								<form method="post" action="existe3.php">
+									<div class="fields">
+										<div class="field half">
+											<label for="name">Correo</label>
+											<input type="text" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required />
+										</div>
+										<div class="field half">
+											<label for="email">Contraseña</label>
+											<input type="password" name="password" pattern="[A-Za-z0-9_-]{1,30}" required />
 										</div>
 									</div>
 									<ul class="actions">
