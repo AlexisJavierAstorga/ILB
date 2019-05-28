@@ -36,7 +36,7 @@ if(isset($_SESSION['u_usuario'])){
                 <li><a href="alumno.php">Inicio</a></li>
 								<li><a href="alumnomod.php">Modificar</a></li>
 								<li><a href="audi.php">Acceso Auditorio</a></li>
-								<li><a href="conlog.php">Contacto</a></li>
+								<!-- Fin -->
 								<?php
 										echo "<li><a href='salir.php'>Salir de la cuenta</a></li>";
 								?>
@@ -60,7 +60,7 @@ if(isset($_SESSION['u_usuario'])){
                 <li>
                   <a href="alumno.php">
                     <h3>Inicio</h3>
-                    <p>Academia de Informática 2018.</p>
+                    <p>Academia de Informática 2019.</p>
                   </a>
                 </li>
                 <li>
@@ -196,7 +196,7 @@ if(isset($_SESSION['u_usuario'])){
 								<header>
 									<div align="center">
 
-                    <h2>Bienvenido</h2>
+                    <h2>Bienvenid@</h2>
 
                     <h1>
 											<?php

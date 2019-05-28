@@ -22,8 +22,6 @@ $password=$_POST['password'];
 include("conexion.php");
 
 $proceso = $con->query("SELECT * FROM alumnos WHERE correo = '$usuario' AND pass = '$password' ");
-$proceso2 = $con->query("SELECT * FROM maestros WHERE correo = '$usuario' AND pass = '$password' ");
-$proceso3 = $con->query("SELECT * FROM visitas WHERE correo = '$usuario' AND pass = '$password' ");
 
 if($resultado = mysqli_fetch_array($proceso)){
 
@@ -43,11 +41,11 @@ if($resultado = mysqli_fetch_array($proceso)){
     location.href='alumno.php';
     </script>";*/
 if($_SESSION['cargo'] == 'Lider'){
-echo "<script>alert('Bienvenido al portal, ".$_SESSION['nombre'].", ".$_SESSION['apellidoPat'].", ".$_SESSION['apellidoMat']."');
+echo "<script>alert('Bienvenido al portal lider, ".$_SESSION['nombre'].", ".$_SESSION['apellidoPat'].", ".$_SESSION['apellidoMat']."');
 location.href='alumno.php';
 </script>"; // No se puede enviar más de un header a la vez, por eso eliminé el otro header.
 }elseif($_SESSION['cargo'] == 'Otro'){
-echo "<script>alert('Bienvenido al portal, ".$_SESSION['nombre'].", ".$_SESSION['apellidoPat'].", ".$_SESSION['apellidoMat']."');
+echo "<script>alert('Bienvenido al portal colaborador, ".$_SESSION['nombre'].", ".$_SESSION['apellidoPat'].", ".$_SESSION['apellidoMat']."');
 location.href='colaborador.php';
 </script>";
 }else{

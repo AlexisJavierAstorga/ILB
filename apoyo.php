@@ -109,25 +109,26 @@ if(isset($_SESSION['u_usuario'])){
 								</section>
                 <table border="1" >
               		<tr>
-              			<td align="center">Corporativa</td>
+              			<td align="center">Foto</td>
+              			<td align="center">Puesto</td>
               			<td align="center">Consultoria</td>
-              			<td align="center">Nombre proyecto</td>
-                    <td align="center">Ver</td>
+                    <td align="center">Regresar</td>
               		</tr>
 
                     <?php
                     //$query= "SELECT * FROM proyectos WHERE id_alu='".$_SESSION['id']."'";
+                    $id_proy = $_REQUEST['nombre_proy'];
                     include("conexion.php");
-                    $query="SELECT corporativa,consultoria,nombre_proy from proyectos WHERE correo='".$_SESSION['u_usuario']."'";
+                    $query= "SELECT * FROM proyectos WHERE nombre_proy='$id_proy'";
                     $resultado=$con->query($query);
                     while ($row = $resultado->fetch_assoc()){
                      ?>
 
                     <tr>
-                      <td align="center"><?php echo '<img src="'.$row['corporativa'].'" width="70" height="70"/>'; ?></td>
+                      <td align="center"><?php echo '<img src="'.$row['alumno'].'" width="70" height="70"/>'; ?></td>
+                      <td align="center"><?php echo $row['puesto'] ?></td>
                       <td align="center"><?php echo $row['consultoria'] ?></td>
-                      <td align="center"><?php echo $row['nombre_proy'] ?></td>
-                      <td align="center"><a href='apoyo.php?nombre_proy=<?php echo $row['nombre_proy']; ?>'>Colaborador</a></td>
+                      <td align="center"><a href='alumno.php'>Regresar</a></td></tr>
                     </tr>
                   <?php
                   }

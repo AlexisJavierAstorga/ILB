@@ -99,42 +99,90 @@ if(isset($_SESSION['u_usuario'])){
 							<article class="post">
 								<header>
 									<div class="title">
-										<h2><a href="#">Proyectos registrados</a></h2>
-										<p>Estos son los proyectos que haz registrado hasta ahora.</p>
+										<h2><a href="#">Registra tu proyecto</a></h2>
+										<p>Llena cada campo para validar la presentación de tu proyecto en el Auditorio.</p>
 									</div>
 								</header>
 
 								<section>
-									<h3>Datos del proyecto</h3>
+									<h3>Datos del alumno</h3>
+									<form action="regproy.php" name="formulario" method="post" enctype="multipart/form-data">
+										<div class="row gtr-uniform">
+
+											<div class="col-6 col-12-xsmall">
+                        <h4>Foto</h4>
+                        <?php
+                        include("conexion.php");
+                        $query= "SELECT * FROM alumnos WHERE correo='".$_SESSION['u_usuario']."'";
+                        $resultado=$con->query($query);
+                        while ($row = $resultado->fetch_assoc()){
+                        echo '<input type="text" name="alumno" value="'.$row['foto'].'" readonly=""/>'.'<br>';
+                      }
+                        ?>
+
+											</div>
+
+											<div class="col-6 col-12-xsmall">
+                        <h4>Correo</h4>
+                        <?php
+                        include("conexion.php");
+                        $query= "SELECT * FROM alumnos WHERE correo='".$_SESSION['u_usuario']."'";
+                        $resultado=$con->query($query);
+                        while ($row = $resultado->fetch_assoc()){
+                        echo '<input type="text" name="correo" value="'.$row['correo'].'" readonly=""/>'.'<br>';
+                        }
+                        ?>
+											</div>
+
+
+
+
+                      <div class="col-6 col-12-xsmall">
+                        <h3>Datos del proyecto</h3>
+                        <div class="col-6 col-12-xsmall">
+                          <h4>Puesto</h4>
+                          <?php
+                          include("conexion.php");
+                          $query= "SELECT * FROM alumnos WHERE correo='".$_SESSION['u_usuario']."'";
+                          $resultado=$con->query($query);
+                          while ($row = $resultado->fetch_assoc()){
+                          echo '<input type="text" name="puesto" value="'.$row['cargo'].'" readonly=""/>'.'<br>';
+                          }
+                          ?>
+  											</div>
+                        <br><h4>Nombre de la consultoría</h4>
+												<input type="text" name="consul" id="demo-grupo" value="" placeholder="Escribe el nombre de la consultoría..." required pattern="[A-Za-z0-9_-]{1,30}"/>
+											</div>
+
+											<div class="col-10 col-12-xsmall">
+                        <br><h4>Imagen Corporativa</h4>
+                        <input id="file" type="file" name="corp" required/>
+											</div>
+
+                      <div class="col-6 col-12-xsmall">
+                        <br><h4>Nombre del proyecto</h4>
+												<input type="text" name="proy" id="demo-proy" value="" placeholder="Escribe el nombre del proyecto..." required pattern="[A-Za-z0-9_-]{1,30}"/>
+											</div>
+
+											<div class="col-12">
+                        <br><h4>Breve descripción del proyecto</h4>
+												<textarea name="desc" id="demo-desc" placeholder="Descripción..." rows="4" pattern="[A-Za-z0-9_-]{1,30}" required></textarea>
+											</div>
+
+                      <div class="col-10 col-12-xsmall">
+                        <br><h4>Organigrama</h4>
+                        <input id="file2" type="file" name="orga" required/>
+											</div>
+
+											<div class="col-12">
+                        <br>
+												<ul class="actions">
+													<li><input type="submit" value="Registrar proyecto" /></li>
+												</ul>
+											</div>
+										</div>
+									</form>
 								</section>
-                <table border="1" >
-              		<tr>
-              			<td align="center">Corporativa</td>
-              			<td align="center">Consultoria</td>
-              			<td align="center">Nombre proyecto</td>
-                    <td align="center">Ver</td>
-              		</tr>
-
-                    <?php
-                    //$query= "SELECT * FROM proyectos WHERE id_alu='".$_SESSION['id']."'";
-                    include("conexion.php");
-                    $query="SELECT corporativa,consultoria,nombre_proy from proyectos WHERE correo='".$_SESSION['u_usuario']."'";
-                    $resultado=$con->query($query);
-                    while ($row = $resultado->fetch_assoc()){
-                     ?>
-
-                    <tr>
-                      <td align="center"><?php echo '<img src="'.$row['corporativa'].'" width="70" height="70"/>'; ?></td>
-                      <td align="center"><?php echo $row['consultoria'] ?></td>
-                      <td align="center"><?php echo $row['nombre_proy'] ?></td>
-                      <td align="center"><a href='apoyo.php?nombre_proy=<?php echo $row['nombre_proy']; ?>'>Colaborador</a></td>
-                    </tr>
-                  <?php
-                  }
-                   ?>
-                  </table>
-
-              	</table>
 
 							</article>
 

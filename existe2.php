@@ -36,8 +36,8 @@ if($resultado = mysqli_fetch_array($proceso2)){
     /*echo "<script>alert('Bienvenido al portal, $usuario');
     location.href='alumno.php';
     </script>";*/
-    echo "<script>alert('Bienvenido al portal, ".$_SESSION['nombre'].", ".$_SESSION['apellidoPat'].", ".$_SESSION['apellidoMat']."');
-    location.href='mestro.php';
+    echo "<script>alert('Bienvenido al portal maestro, ".$_SESSION['nombre'].", ".$_SESSION['apellidoPat'].", ".$_SESSION['apellidoMat']."');
+    location.href='maestro.php';
     </script>";
 }else{
   echo '<script>

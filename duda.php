@@ -25,7 +25,7 @@
 						<nav class="links">
 							<ul>
 								<li><a href="index.php">Inicio</a></li>
-								<li><a href="reg.php">Registrar / NICIAR SESIÓN</a></li>
+								<li><a href="reg.php">Registrar / INICIAR SESIÓN</a></li>
 								<li><a href="con.php">Contacto</a></li>
 								<!-- comienza otro menu -->
 							</ul>
@@ -48,7 +48,7 @@
 									<li>
 										<a href="index.php">
 											<h3>Inicio</h3>
-											<p>Academia de Informática 2018.</p>
+											<p>Academia de Informática 2019.</p>
 										</a>
 									</li>
 									<li>
@@ -63,10 +63,10 @@
 						<!-- Actions -->
 							<section>
 								<ul class="actions stacked">
-									<li><a href="reg.php" class="button large fit">Registrar</a></li>
+									<li><a href="reg.php" class="button large fit">Registrar / INICIAR SESIÓN</a></li>
 								</ul>
 								<ul class="actions stacked">
-									<li><a href="login.php" class="button large fit">INICIAR SESIÓN</a></li>
+									<li><a href="duda.php" class="button large fit">DUDA REGISTRO</a></li>
 								</ul>
 							</section>
 					</section>

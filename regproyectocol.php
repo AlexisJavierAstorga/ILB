@@ -33,10 +33,10 @@ if(isset($_SESSION['u_usuario'])){
 						<h1><a href="index.php">Instituto Leonardo Bravo</a></h1>
 						<nav class="links">
 							<ul>
-                <li><a href="alumno.php">Inicio</a></li>
-                <li><a href="regproyecto.php">Registrar proyecto</a></li>
-								<li><a href="alumnomod.php">Modificar</a></li>
-								<li><a href="audi.php">Acceso Auditorio</a></li>
+                <li><a href="colaborador.php">Inicio</a></li>
+                <li><a href="regproyectocol.php">Registrar en proyecto</a></li>
+								<li><a href="#">Modificar</a></li>
+								<li><a href="audicol.php">Acceso Auditorio</a></li>
 								<!-- Fin -->
 								<?php
 										echo "<li><a href='salir.php'>Salir de la cuenta</a></li>";
@@ -59,25 +59,25 @@ if(isset($_SESSION['u_usuario'])){
             <section>
               <ul class="links">
                 <li>
-                  <a href="alumno.php">
+                  <a href="colaborador.php">
                     <h3>Inicio</h3>
                     <p>Academia de Informática 2019.</p>
                   </a>
                 </li>
                 <li>
-                  <a href="regproyecto.php">
+                  <a href="regproyectocol.php">
                     <h3>Registrar proyecto</h3>
                     <p>Registra tu proyecto.</p>
                   </a>
                 </li>
                 <li>
-                  <a href="alumnomod.php">
+                  <a href="#">
                     <h3>Modificar</h3>
                     <p>Modifica datos de tu registro.</p>
                   </a>
                 </li>
                 <li>
-                  <a href="audi.php">
+                  <a href="audicol.php">
                     <h3>Acceso Auditorio</h3>
                     <p>En este apartado encontrarás tu gafete para el acceso al Auditorio.</p>
                   </a>
@@ -112,13 +112,13 @@ if(isset($_SESSION['u_usuario'])){
               			<td align="center">Corporativa</td>
               			<td align="center">Consultoria</td>
               			<td align="center">Nombre proyecto</td>
-                    <td align="center">Ver</td>
+                    <td align="center">Registrarse</td>
               		</tr>
 
                     <?php
                     //$query= "SELECT * FROM proyectos WHERE id_alu='".$_SESSION['id']."'";
                     include("conexion.php");
-                    $query="SELECT corporativa,consultoria,nombre_proy from proyectos WHERE correo='".$_SESSION['u_usuario']."'";
+                    $query="SELECT id_proy,corporativa,consultoria,nombre_proy from proyectos";
                     $resultado=$con->query($query);
                     while ($row = $resultado->fetch_assoc()){
                      ?>
@@ -127,7 +127,7 @@ if(isset($_SESSION['u_usuario'])){
                       <td align="center"><?php echo '<img src="'.$row['corporativa'].'" width="70" height="70"/>'; ?></td>
                       <td align="center"><?php echo $row['consultoria'] ?></td>
                       <td align="center"><?php echo $row['nombre_proy'] ?></td>
-                      <td align="center"><a href='apoyo.php?nombre_proy=<?php echo $row['nombre_proy']; ?>'>Colaborador</a></td>
+                      <td align="center"><a href='apoyo2.php?id_proy=<?php echo $row['id_proy']; ?>'>Ver</a></td>
                     </tr>
                   <?php
                   }
@@ -145,7 +145,7 @@ if(isset($_SESSION['u_usuario'])){
 
 						<!-- Intro -->
 							<section id="intro">
-								<a href="alumno.php" class="logo"><div align="center">
+								<a href="colaborador.php" class="logo"><div align="center">
                   <?php
                   include("conexion.php");
                   $query= "SELECT * FROM alumnos WHERE correo='".$_SESSION['u_usuario']."'";

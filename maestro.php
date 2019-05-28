@@ -34,8 +34,9 @@ if(isset($_SESSION['u_usuario'])){
 						<nav class="links">
 							<ul>
                 <li><a href="maestro.php">Inicio</a></li>
+								<li><a href="#">Modificar</a></li>
 								<li><a href="audimaes.php">Acceso Auditorio</a></li>
-								<li><a href="conlog.php">Contacto</a></li>
+								<!-- Fin -->
 								<?php
 										echo "<li><a href='salir.php'>Salir de la cuenta</a></li>";
 								?>
@@ -59,19 +60,19 @@ if(isset($_SESSION['u_usuario'])){
                 <li>
                   <a href="maestro.php">
                     <h3>Inicio</h3>
-                    <p>Academia de Informática 2018.</p>
+                    <p>Academia de Informática 2019.</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <h3>Modificar</h3>
+                    <p>Modifica datos de tu registro.</p>
                   </a>
                 </li>
                 <li>
                   <a href="audimaes.php">
                     <h3>Acceso Auditorio</h3>
                     <p>En este apartado encontrarás tu gafete para el acceso al Auditorio.</p>
-                  </a>
-                </li>
-                <li>
-                  <a href="conlog.php">
-                    <h3>Contacto</h3>
-                    <p>Contacto con la intalación del ILB Centro.</p>
                   </a>
                 </li>
               </ul>
@@ -91,52 +92,44 @@ if(isset($_SESSION['u_usuario'])){
 							<article class="post">
 								<header>
 									<div class="title">
-										<h2><a href="#">Proyectos de alumnos</a></h2>
-										<p>Proyectos de alumnos que presentan en la semana de la Informática</p>
+										<h2><a href="#">Proyectos registrados de alumnos</a></h2>
+										<p>Estos son los proyectos que haz registrado hasta ahora.</p>
 									</div>
 								</header>
 
 								<section>
-                  <table border = "1">
-                  <tbody>
-                    <tr><td>id_proy</td><td>Alumno</td><td>Grupo</td><td>Salon</td><td>Consultoria</td><td>Corporativa</td><td>Proyecto</td><td>Descripcion</td><td>Organigrama</td><td>Presentación</td></tr>
-                  <!-- /Breadcrumb -->
-                  <?php
-                  include("conexion.php");
-
-                  $result = mysqli_query($con, "SELECT * FROM proyecto");
-
-                  if ($row = mysqli_fetch_array($result)){
-                    /*echo "<table border = '1'><tr><td>ID Venta</td><td>Correo</td><td>ID Producto</td><td>Nombre producto</td><td>Talla</td><td>Cantidad del producto</td><td>Total venta</td><td>Fecha de compra</td></tr>";*/
-                    do {
-                        /*echo "<tr><td>".$row["IDVEN"]."</td><td>".$row["correo"]."</td><td>".$row["IDPROD"]."</td><td>".$row["nombre"]."</td><td>".$row["talla"]."</td><td>".$row["cantidadProducto"]."</td><td>".$row["totalVenta"]."</td><td>".$row["fechaCompra"]."</td></tr> \n";
-                      }while ($row = mysqli_fetch_array($result));
-                     echo "</table> \n";
-                  }else {
-                  echo "¡ No haz realizado compras !";
-                  }*/
-                   ?>
-
-                   <tr>
-                     <td><?php echo $row["id_proy"]; ?></td>
-                     <td><?php echo $row["alumno"]; ?></td>
-                     <td><?php echo $row["grupo"]; ?></td>
-                     <td><?php echo $row["salon"]; ?></td>
-                     <td><?php echo $row["consultoria"]; ?></td>
-                     <td><?php echo $row["corporativa"]; ?></td>
-                     <td><?php echo $row["proyecto"]; ?></td>
-                     <td><?php echo $row["descripcion"]; ?></td>
-                     <td><?php echo $row["organigrama"]; ?></td>
-                     <td><?php echo $row["presentacion"]; ?></td>
-
-                   <?php
-                  }while ($row = mysqli_fetch_array($result));
-                  }
-
-                    ?>
-                  </tbody>
-                  </table>
+									<h3>Datos del proyecto</h3>
 								</section>
+                <table border="1" >
+              		<tr>
+              			<td align="center">Corporativa</td>
+              			<td align="center">Consultoria</td>
+              			<td align="center">Nombre proyecto</td>
+                    <td align="center">Ver proyecto</td>
+                    <td align="center">Colaboradores</td>
+              		</tr>
+
+                    <?php
+                    //$query= "SELECT * FROM proyectos WHERE id_alu='".$_SESSION['id']."'";
+                    include("conexion.php");
+                    $query="SELECT id_proy,corporativa,consultoria,nombre_proy from proyectos";
+                    $resultado=$con->query($query);
+                    while ($row = $resultado->fetch_assoc()){
+                     ?>
+
+                    <tr>
+                      <td align="center"><?php echo '<img src="'.$row['corporativa'].'" width="70" height="70"/>'; ?></td>
+                      <td align="center"><?php echo $row['consultoria'] ?></td>
+                      <td align="center"><?php echo $row['nombre_proy'] ?></td>
+                      <td align="center"><a href='apoyo3.php?id_proy=<?php echo $row['id_proy']; ?>'>Ver</a></td>
+                      <td align="center"><a href='apoyo4.php?nombre_proy=<?php echo $row['nombre_proy']; ?>'>Colaborador</a></td>
+                    </tr>
+                  <?php
+                  }
+                   ?>
+                  </table>
+
+              	</table>
 
 							</article>
 
@@ -147,17 +140,21 @@ if(isset($_SESSION['u_usuario'])){
 
 						<!-- Intro -->
 							<section id="intro">
-								<a href="alumno.php" class="logo"><div align="center"><?php
-                  echo "<img src='images/archivos/alumnos/".$_SESSION['foto']."' width='30' height='30'>".'<br>'; ?>
-
+								<a href="colaborador.php" class="logo"><div align="center">
                   <?php
-                    echo "<img src='images/archivos/qr/".$_SESSION['Qr']."'>".'<br>'; ?>
+                  include("conexion.php");
+                  $query= "SELECT * FROM alumnos WHERE correo='".$_SESSION['u_usuario']."'";
+                  $resultado=$con->query($query);
+                  while ($row = $resultado->fetch_assoc()){
+                  echo '<img src="'.$row['foto'].'" width="30" height="200">'.'<br>';
+                }
+                  ?>
 
                 </div></a>
 								<header>
 									<div align="center">
 
-                    <h2>Bienvenido</h2>
+                    <h2>Bienvenid@</h2>
 
                     <h1>
 											<?php
