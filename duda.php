@@ -25,7 +25,7 @@
 						<nav class="links">
 							<ul>
 								<li><a href="index.php">Inicio</a></li>
-								<li><a href="reg.php">Registrar / INICIAR SESIÓN</a></li>
+								<li><a href="reg.php">Registrar / LOGIN</a></li>
 								<li><a href="con.php">Contacto</a></li>
 								<!-- comienza otro menu -->
 							</ul>
@@ -63,7 +63,7 @@
 						<!-- Actions -->
 							<section>
 								<ul class="actions stacked">
-									<li><a href="reg.php" class="button large fit">Registrar / INICIAR SESIÓN</a></li>
+									<li><a href="reg.php" class="button large fit">Registrar / LOGIN</a></li>
 								</ul>
 								<ul class="actions stacked">
 									<li><a href="duda.php" class="button large fit">DUDA REGISTRO</a></li>

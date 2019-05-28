@@ -36,7 +36,7 @@
 	<nav class="links">
 		<ul>
 			<li><a href="index.php">Inicio</a></li>
-			<li><a href="reg.php">Registrar / INICIAR SESIÓN</a></li>
+			<li><a href="reg.php">Registrar / LOGIN</a></li>
 			<li><a href="con.php">Contacto</a></li>
 			<!-- comienza otro menu -->
 		</ul>

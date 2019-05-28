@@ -77,7 +77,7 @@
 						<!-- Actions -->
 							<section>
 								<ul class="actions stacked">
-									<li><a href="reg.php" class="button large fit">Registrar / INICIAR SESIÓN</a></li>
+									<li><a href="reg.php" class="button large fit">Registrar <br>/ INICIAR SESIÓN</a></li>
 								</ul>
 								<ul class="actions stacked">
 									<li><a href="duda.php" class="button large fit">DUDA REGISTRO</a></li>
