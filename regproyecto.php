@@ -151,26 +151,26 @@ if(isset($_SESSION['u_usuario'])){
                           ?>
   											</div>
                         <br><h4>Nombre de la consultoría</h4>
-												<input type="text" name="consul" id="demo-grupo" value="" placeholder="Escribe el nombre de la consultoría..." required pattern="[A-Za-z0-9_-]{1,30}"/>
+												<input type="text" name="consul" id="demo-grupo" value="" placeholder="Escribe el nombre de la consultoría... max 30 caracteres" required pattern="[A-Za-z0-9_ -]{1,30}"/>
 											</div>
 
 											<div class="col-10 col-12-xsmall">
-                        <br><h4>Imagen Corporativa</h4>
+                        <br><h4>Imagen Corporativa <b>(solo imagen)</b></h4>
                         <input id="file" type="file" name="corp" required/>
 											</div>
 
                       <div class="col-6 col-12-xsmall">
                         <br><h4>Nombre del proyecto</h4>
-												<input type="text" name="proy" id="demo-proy" value="" placeholder="Escribe el nombre del proyecto..." required pattern="[A-Za-z0-9_-]{1,30}"/>
+												<input type="text" name="proy" id="demo-proy" value="" placeholder="Escribe el nombre del proyecto... max 30 caracteres" required pattern="[A-Za-z0-9_ -]{1,50}"/>
 											</div>
 
 											<div class="col-12">
                         <br><h4>Breve descripción del proyecto</h4>
-												<textarea name="desc" id="demo-desc" placeholder="Descripción..." rows="4" pattern="[A-Za-z0-9_-]{1,30}" required></textarea>
+												<textarea name="desc" id="demo-desc" placeholder="Descripción..." rows="4" pattern="[A-Za-z0-9_ -]{1,90}" required></textarea>
 											</div>
 
                       <div class="col-10 col-12-xsmall">
-                        <br><h4>Organigrama</h4>
+                        <br><h4>Organigrama <b>(solo imagen)</b></h4>
                         <input id="file2" type="file" name="orga" required/>
 											</div>
 

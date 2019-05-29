@@ -41,7 +41,7 @@
 								<li><a href="index.php">Inicio</a></li>
 								<li><a href="reg.php">Registrar / LOGIN</a></li>
 								<li><a href="con.php">Contacto</a></li>
-								<!-- comienza otro menu -->
+								<li><a href="gal.php">Galería</a></li>
 							</ul>
 						</nav>
 						<nav class="main">
@@ -68,7 +68,13 @@
 									<li>
 										<a href="con.php">
 											<h3>Contacto</h3>
-											<p>Contacto con la intalación del ILB Centro.</p>
+											<p>Contacto con las instalaciones del ILB Centro.</p>
+										</a>
+									</li>
+									<li>
+										<a href="gal.php">
+											<h3>Galería</h3>
+											<p>Visita nuestra galería de eventos.</p>
 										</a>
 									</li>
 								</ul>
@@ -89,14 +95,36 @@
 					<div id="main">
 
 						<!-- Post -->
+						<article class="post">
+							<header>
+								<div class="title">
+									<h2><a href="#">A la comunidad de Informática en licenciatura</a></h2>
+									<p>Se les informa que deben de realizar su registro para el pase al evento.</p>
+								</div>
+								<div class="meta">
+									<time class="published" datetime="2018-11-22">Mayo 28, 2019</time>
+									<a href="#" class="author"><span class="name">Astorga</span><img src="images/autor/avatar1.jpg" alt="" /></a>
+								</div>
+							</header>
+							<a href="#" class="image featured"><img src="images/reg.jpg" height="500" alt="" /></a>
+							<p>Recuerda que los Líderes deberán de registrar su proyecto para que los colaboradores se registren a él.</p>
+							<footer>
+								<ul class="stats">
+									<li><a href="#">General</a></li>
+									<li><a href="#" class="icon fa-heart">-</a></li>
+									<li><a href="#" class="icon fa-comment">-</a></li>
+								</ul>
+							</footer>
+						</article>
+
 							<article class="post">
 								<header>
 									<div class="title">
 										<h2><a href="auditorio.php">¡La semana de Informática se Acerca!</a></h2>
-										<p>Prepara tu proyecto que a partir del 28 al 30 de Noviembre se presentan en el Auditorio.</p>
+										<p>Prepara tu proyecto que a partir del 31 de Mayo se presentan en el Auditorio.</p>
 									</div>
 									<div class="meta">
-										<time class="published" datetime="2018-11-22">Noviembre 22, 2018</time>
+										<time class="published" datetime="2018-11-22">Mayo 28, 2019</time>
 										<a href="#" class="author"><span class="name">Astorga</span><img src="images/autor/avatar1.jpg" alt="" /></a>
 									</div>
 								</header>
@@ -444,7 +472,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 								<a href="index.php" class="logo"><div align="center"><img src="logo/info.png" alt="" /></div></a>
 								<header>
 									<div align="center">
-										<h2>Eventos Informática 2018</h2>
+										<h2>Eventos Informática 2019</h2>
 										<p>En esta Página Web podrás encontrar todo lo relacionado a los eventos que suceden en la Academia de Informática. </p>
 										<p>Si eres alumno <a href="reg.php">Regístrate</a> y sube tu proyecto. </p>
 									</div>
@@ -459,7 +487,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 										<article class="mini-post">
 											<header>
 												<h3><a href="single.php">¿Tienes dudas de como registrar tu proyecto?</a></h3>
-												<time class="published" datetime="2018-11-22">Noviembre 22, 2018</time>
+												<time class="published" datetime="2018-11-22">Mayo 28, 2019</time>
 												<a href="#" class="author"><img src="images/autor/avatar1.jpg" alt="" /></a>
 											</header>
 											<a href="duda.php" class="image"><img src="images/7mo.jpeg" alt="" height="250"/></a>
@@ -488,7 +516,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 										<article>
 											<header>
 												<h3><a href="http://rstextilnew.000webhostapp.com">R.S. Textil</a></h3>
-												<time class="published" datetime="2018-11-22">Noviembre 22, 2018</time>
+												<time class="published" datetime="2018-11-22">Mayo 28, 2019</time>
 											</header>
 											<a href="http://rstextilnew.000webhostapp.com" class="image"><img src="images/nov/rs.png" alt="" /></a>
 										</article>

@@ -26,7 +26,7 @@
 								<li><a href="index.php">Inicio</a></li>
 								<li><a href="reg.php">Registrar / LOGIN</a></li>
 								<li><a href="con.php">Contacto</a></li>
-								<!-- comienza otro menu -->
+								<li><a href="gal.php">Galería</a></li>
 							</ul>
 						</nav>
 						<nav class="main">
@@ -53,7 +53,13 @@
 									<li>
 										<a href="con.php">
 											<h3>Contacto</h3>
-											<p>Contacto con la intalación del ILB Centro.</p>
+											<p>Contacto con las instalaciones del ILB Centro.</p>
+										</a>
+									</li>
+									<li>
+										<a href="gal.php">
+											<h3>Galería</h3>
+											<p>Visita nuestra galería de eventos.</p>
 										</a>
 									</li>
 								</ul>
@@ -81,7 +87,7 @@
 										<p>Prepara tu proyecto que a partir del 28 al 30 de Noviembre se presentan en el Auditorio.</p>
 									</div>
 									<div class="meta">
-										<time class="published" datetime="2018-11-22">Noviembre 22, 2018</time>
+										<time class="published" datetime="2018-11-22">Mayo 28, 2019</time>
 										<a href="#" class="author"><span class="name">Astorga</span><img src="images/autor/avatar1.jpg" alt="" /></a>
 									</div>
 								</header>

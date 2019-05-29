@@ -29,7 +29,7 @@
 							<li><a href="index.php">Inicio</a></li>
 							<li><a href="reg.php">Registrar / LOGIN</a></li>
 							<li><a href="con.php">Contacto</a></li>
-							<!-- comienza otro menu -->
+							<li><a href="gal.php">Galería</a></li>
 						</ul>
 					</nav>
 					<nav class="main">
@@ -56,7 +56,13 @@
 								<li>
 									<a href="con.php">
 										<h3>Contacto</h3>
-										<p>Contacto con la intalación del ILB Centro.</p>
+										<p>Contacto con las instalaciones del ILB Centro.</p>
+									</a>
+								</li>
+								<li>
+									<a href="gal.php">
+										<h3>Galería</h3>
+										<p>Visita nuestra galería de eventos.</p>
 									</a>
 								</li>
 							</ul>
@@ -164,7 +170,7 @@
 											<article class="mini-post">
 												<header>
 													<h3><a href="single.php">¿Tienes dudas de como registrar tu proyecto?</a></h3>
-													<time class="published" datetime="2018-11-22">Noviembre 22, 2018</time>
+													<time class="published" datetime="2018-11-22">Mayo 28, 2019</time>
 													<a href="#" class="author"><img src="images/autor/avatar1.jpg" alt="" /></a>
 												</header>
 												<a href="duda.php" class="image"><img src="images/7mo.jpeg" alt="" height="250"/></a>
@@ -193,7 +199,7 @@
 											<article>
 												<header>
 													<h3><a href="http://rstextilnew.000webhostapp.com">R.S. Textil</a></h3>
-													<time class="published" datetime="2018-11-22">Noviembre 22, 2018</time>
+													<time class="published" datetime="2018-11-22">Mayo 28, 2019</time>
 												</header>
 												<a href="single.php" class="image"><img src="images/nov/rs.png" alt="" /></a>
 											</article>

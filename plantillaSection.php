@@ -26,7 +26,7 @@
 								<li><a href="index.php">Inicio</a></li>
 								<li><a href="reg.php">Registrar / LOGIN</a></li>
 								<li><a href="con.php">Contacto</a></li>
-								<!-- comienza otro menu -->
+								<li><a href="gal.php">Galería</a></li>
 							</ul>
 						</nav>
 						<nav class="main">
@@ -53,7 +53,7 @@
 									<li>
 										<a href="con.php">
 											<h3>Contacto</h3>
-											<p>Contacto con la intalación del ILB Centro.</p>
+											<p>Contacto con las instalaciones del ILB Centro.</p>
 										</a>
 									</li>
 								</ul>

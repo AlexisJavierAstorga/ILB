@@ -57,6 +57,7 @@
 						<!-- Intro -->
 							<article id="intro">
 								<h2 class="major">Registro Alumnos</h2>
+								<h2 class="major">Sin acentos</h2>
 								<form action="reg_alu.php" method="post" enctype="multipart/form-data">
 									<div class="fields">
 										<div class="field half">
@@ -65,15 +66,15 @@
 										</div>
 										<div class="field half">
 											<label for="name">Nombre</label>
-											<input type="text" name="name" id="name" placeholder="Escribe tu nombre" pattern="[A-Za-z0-9_-]{1,30}" required/>
+											<input type="text" name="name" id="name" placeholder="Escribe solo un nombre" pattern="[A-Za-z0-9_ -]{1,30}" required/>
 										</div>
 										<div class="field half">
 											<label for="name">Apellido Paterno</label>
-											<input type="text" name="app" id="name" placeholder="Escribe tu apellido paterno" pattern="[A-Za-z0-9_-]{1,30}" required/>
+											<input type="text" name="app" id="name" placeholder="Escribe tu apellido paterno" pattern="[A-Za-z0-9_ -]{1,30}" required/>
 										</div>
 										<div class="field half">
 											<label for="name">Apellido Materno</label>
-											<input type="text" name="apm" id="name" placeholder="Escribe tu apellido materno" pattern="[A-Za-z0-9_-]{1,30}" required/>
+											<input type="text" name="apm" id="name" placeholder="Escribe tu apellido materno" pattern="[A-Za-z0-9_ -]{1,30}" required/>
 										</div>
 										<div class="field half">
 											<label for="name">Grupo</label>
@@ -132,11 +133,11 @@
 										</div>
 										<div class="field half">
 											<label for="email">Contraseña</label>
-											<input type="password" name="password" id="password" title="Recuerda bien tu contraseña." value="" pattern="[A-Za-z0-9_-]{1,30}" required/>
+											<input type="password" name="password" id="password" placeholder="MAX 15 CARACTERES" title="Recuerda bien tu contraseña." value="" pattern="[A-Za-z0-9_ -]{1,15}" required/>
 										</div>
 										<div class="field half">
 											<label for="email">Confirmar contraseña</label>
-											<input type="password" name="repeat-pass" id="confirm_password" value="" pattern="[A-Za-z0-9_-]{1,30}" required/>
+											<input type="password" name="repeat-pass" id="confirm_password" value="" pattern="[A-Za-z0-9_ -]{1,15}" required/>
 										</div>
 									</div>
 									<ul class="actions">
@@ -149,6 +150,7 @@
 						<!-- Work -->
 							<article id="work">
 								<h2 class="major">Registro Invitados</h2>
+								<h2 class="major">Sin acentos</h2>
 								<form method="post" action="reg_inv.php" enctype="multipart/form-data">
 									<div class="fields">
 										<div class="field half">
@@ -157,15 +159,15 @@
 										</div>
 										<div class="field half">
 											<label for="name">Nombre</label>
-											<input type="text" name="name" id="name" placeholder="Escribe tu nombre" pattern="[A-Za-z0-9_-]{1,30}" required/>
+											<input type="text" name="name" id="name" placeholder="Escribe tu nombre" pattern="[A-Za-z0-9_ -]{1,30}" required/>
 										</div>
 										<div class="field half">
 											<label for="name">Apellido Paterno</label>
-											<input type="text" name="app" id="name" placeholder="Escribe tu apellido paterno" pattern="[A-Za-z0-9_-]{1,30}" required/>
+											<input type="text" name="app" id="name" placeholder="Escribe tu apellido paterno" pattern="[A-Za-z0-9_ -]{1,30}" required/>
 										</div>
 										<div class="field half">
 											<label for="name">Apellido Materno</label>
-											<input type="text" name="apm" id="name" placeholder="Escribe tu apellido materno" pattern="[A-Za-z0-9_-]{1,30}" required/>
+											<input type="text" name="apm" id="name" placeholder="Escribe tu apellido materno" pattern="[A-Za-z0-9_ -]{1,30}" required/>
 										</div>
 										<div class="field half">
 											<label for="email">Correo</label>
@@ -191,11 +193,11 @@
 										</div>
 										<div class="field half">
 											<label for="email">Contraseña</label>
-											<input type="password" name="password" id="password" title="Recuerda bien tu contraseña." pattern="[A-Za-z0-9_-]{1,30}" value="" required/>
+											<input type="password" name="password" id="password" placeholder="MAX 15 CARACTERES" title="Recuerda bien tu contraseña." pattern="[A-Za-z0-9_ -]{1,15}" value="" required/>
 										</div>
 										<div class="field half">
 											<label for="email">Confirmar contraseña</label>
-											<input type="password" name="repeat-pass" id="confirm_password" value="" pattern="[A-Za-z0-9_-]{1,30}" required/>
+											<input type="password" name="repeat-pass" id="confirm_password" value="" pattern="[A-Za-z0-9_ -]{1,15}" required/>
 										</div>
 									</div>
 									<ul class="actions">
@@ -208,6 +210,7 @@
 						<!-- About -->
 							<article id="about">
 								<h2 class="major">Registro Maestros</h2>
+								<h2 class="major">Sin acentos</h2>
 								<form method="post" action="reg_maes.php" enctype="multipart/form-data">
 									<div class="fields">
 										<div class="field half">
@@ -216,15 +219,15 @@
 										</div>
 										<div class="field half">
 											<label for="name">Nombre</label>
-											<input type="text" name="name" id="name" placeholder="Escribe tu nombre" pattern="[A-Za-z0-9_-]{1,30}" required/>
+											<input type="text" name="name" id="name" placeholder="Escribe tu nombre" pattern="[A-Za-z0-9_ -]{1,30}" required/>
 										</div>
 										<div class="field half">
 											<label for="name">Apellido Paterno</label>
-											<input type="text" name="app" id="name" placeholder="Escribe tu apellido paterno" pattern="[A-Za-z0-9_-]{1,30}" required/>
+											<input type="text" name="app" id="name" placeholder="Escribe tu apellido paterno" pattern="[A-Za-z0-9_ -]{1,30}" required/>
 										</div>
 										<div class="field half">
 											<label for="name">Apellido Materno</label>
-											<input type="text" name="apm" id="name" placeholder="Escribe tu apellido materno" pattern="[A-Za-z0-9_-]{1,30}" required/>
+											<input type="text" name="apm" id="name" placeholder="Escribe tu apellido materno" pattern="[A-Za-z0-9_ -]{1,30}" required/>
 										</div>
 										<div class="field half">
 											<label for="email">Correo</label>
@@ -232,11 +235,11 @@
 										</div>
 										<div class="field half">
 											<label for="email">Contraseña</label>
-											<input type="password" name="password" id="password" title="Recuerda bien tu contraseña." pattern="[A-Za-z0-9_-]{1,30}" value="" required/>
+											<input type="password" name="password" id="password" placeholder="MAX 15 CARACTERES" title="Recuerda bien tu contraseña." pattern="[A-Za-z0-9_ -]{1,15}" value="" required/>
 										</div>
 										<div class="field half">
 											<label for="email">Confirmar contraseña</label>
-											<input type="password" name="repeat-pass" id="confirm_password" value="" pattern="[A-Za-z0-9_-]{1,30}" required/>
+											<input type="password" name="repeat-pass" id="confirm_password" value="" pattern="[A-Za-z0-9_ -]{1,15}" required/>
 										</div>
 										<div class="field half">
 											<label for="email">PIN de maestros</label>
@@ -261,7 +264,7 @@
 										</div>
 										<div class="field half">
 											<label for="email">Contraseña</label>
-											<input type="password" name="password" pattern="[A-Za-z0-9_-]{1,30}" required />
+											<input type="password" name="password" pattern="[A-Za-z0-9_ -]{1,15}" required />
 										</div>
 									</div>
 									<ul class="actions">

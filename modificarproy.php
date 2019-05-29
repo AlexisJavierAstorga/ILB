@@ -78,7 +78,7 @@ if(isset($_SESSION['u_usuario'])){
                 <li>
                   <a href="con.php">
                     <h3>Contacto</h3>
-                    <p>Contacto con la intalación del ILB Centro.</p>
+                    <p>Contacto con las instalaciones del ILB Centro.</p>
                   </a>
                 </li>
               </ul>

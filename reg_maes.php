@@ -37,7 +37,7 @@ mysqli_close($con);
 	}else{
 		echo '<script>
 		alert("Ya estas registrado, prueba tu cuenta");
-		location.href="reg.php#contact";
+		location.href="reg.php#contact2";
 		</script>';
 	}
 	//Cerrar conexion

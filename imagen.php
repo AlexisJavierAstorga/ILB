@@ -5,7 +5,7 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 
-<html>
+<html xmlns="https://auditorioinfoilb.000webhostapp.com/imagen.php">
 	<head>
 		<title>Auditorio ILB</title>
 		<meta charset="utf-8" />
@@ -19,5 +19,6 @@
 									<label>Foto para gafete</label>
 											<input id="file" type="file" name="foto" required/>
 										<button type="submit" name="btn">agregar</button>
+										<script src="error.js"></script>
 	</body>
 </html>
