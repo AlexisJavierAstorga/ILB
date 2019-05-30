@@ -143,7 +143,7 @@ if(isset($_SESSION['u_usuario'])){
 								<a href="colaborador.php" class="logo"><div align="center">
                   <?php
                   include("conexion.php");
-                  $query= "SELECT * FROM alumnos WHERE correo='".$_SESSION['u_usuario']."'";
+                  $query= "SELECT * FROM maestros WHERE correo='".$_SESSION['u_usuario']."'";
                   $resultado=$con->query($query);
                   while ($row = $resultado->fetch_assoc()){
                   echo '<img src="'.$row['foto'].'" width="30" height="200">'.'<br>';

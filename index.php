@@ -98,6 +98,26 @@
 						<article class="post">
 							<header>
 								<div class="title">
+									<h2><a href="#">¡Importante!</a></h2>
+									<p>Se les informa que hoy es el último día de registro para que mañana se les asigne su respectivo código Qr para el acceso al evento.</p>
+								</div>
+								<div class="meta">
+									<time class="published" datetime="2018-11-22">Mayo 29, 2019</time>
+									<a href="#" class="author"><span class="name">Astorga</span><img src="images/autor/avatar1.jpg" alt="" /></a>
+								</div>
+							</header>
+							<p>A sus acompañantes recuerden avisar que hoy es el último día, pueden realizar el registro de ellos y asimismo imprimir su gafete o tenerlo en digital.</p>
+							<footer>
+								<ul class="stats">
+									<li><a href="#">General</a></li>
+									<li><a href="#" class="icon fa-heart">-</a></li>
+									<li><a href="#" class="icon fa-comment">-</a></li>
+								</ul>
+							</footer>
+						</article>
+						<article class="post">
+							<header>
+								<div class="title">
 									<h2><a href="#">A la comunidad de Informática en licenciatura</a></h2>
 									<p>Se les informa que deben de realizar su registro para el pase al evento.</p>
 								</div>

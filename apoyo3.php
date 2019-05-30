@@ -105,11 +105,12 @@ if(isset($_SESSION['u_usuario'])){
                     <div class="col-6 col-12-xsmall">
                       <h4>Foto</h4>
                       <?php
+                      $id_proy = $_REQUEST['id_proy'];
                       include("conexion.php");
-                      $query= "SELECT * FROM alumnos WHERE correo='".$_SESSION['u_usuario']."'";
+                      $query= "SELECT * FROM proyectos WHERE id_proy='$id_proy'";
                       $resultado=$con->query($query);
                       while ($row = $resultado->fetch_assoc()){
-                      echo '<input type="text" name="alumno" value="'.$row['foto'].'" readonly=""/>'.'<br>';
+                      echo '<img src="'.$row['alumno'].'" width="150" height="150"/>'.'<br>';
                     }
                       ?>
 
@@ -118,8 +119,9 @@ if(isset($_SESSION['u_usuario'])){
                     <div class="col-6 col-12-xsmall">
                       <h4>Correo</h4>
                       <?php
+                      $id_proy = $_REQUEST['id_proy'];
                       include("conexion.php");
-                      $query= "SELECT * FROM alumnos WHERE correo='".$_SESSION['u_usuario']."'";
+                      $query= "SELECT * FROM proyectos WHERE id_proy='$id_proy'";
                       $resultado=$con->query($query);
                       while ($row = $resultado->fetch_assoc()){
                       echo '<input type="text" name="correo" value="'.$row['correo'].'" readonly=""/>'.'<br>';
@@ -135,8 +137,9 @@ if(isset($_SESSION['u_usuario'])){
                       <div class="col-6 col-12-xsmall">
                         <h4>Puesto</h4>
                         <?php
+                        $id_proy = $_REQUEST['id_proy'];
                         include("conexion.php");
-                        $query= "SELECT * FROM alumnos WHERE correo='".$_SESSION['u_usuario']."'";
+                        $query= "SELECT * FROM proyectos WHERE id_proy='$id_proy'";
                         $resultado=$con->query($query);
                         while ($row = $resultado->fetch_assoc()){
                         echo '<input type="text" name="puesto" value="'.$row['puesto'].'" readonly=""/>'.'<br>';
@@ -209,13 +212,6 @@ if(isset($_SESSION['u_usuario'])){
                       }
                       ?>
                     </div>
-
-                    <div class="col-12">
-                      <br>
-                      <ul class="actions">
-                        <li><input type="submit" value="Registrar proyecto" onClick="history.back()"/></li>
-                      </ul>
-                    </div>
                   </div>
                 </form>
               </section>
@@ -232,7 +228,7 @@ if(isset($_SESSION['u_usuario'])){
 								<a href="colaborador.php" class="logo"><div align="center">
                   <?php
                   include("conexion.php");
-                  $query= "SELECT * FROM maestro WHERE correo='".$_SESSION['u_usuario']."'";
+                  $query= "SELECT * FROM maestros WHERE correo='".$_SESSION['u_usuario']."'";
                   $resultado=$con->query($query);
                   while ($row = $resultado->fetch_assoc()){
                   echo '<img src="'.$row['foto'].'" width="30" height="200">'.'<br>';
